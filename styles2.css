@@ -64,7 +64,7 @@ h4{
 }
 
 ul{
-    font-size: 13px;
+    font-size: 25px;
     font-weight: 600;
 }
 
@@ -74,6 +74,8 @@ ul{
   justify-content: space-between; 
   align-items: center;
   width: 600px;
+  padding-right: 100px;
+  margin-right: 160px;
   font-size: 1.2em;
 }
 
@@ -109,14 +111,10 @@ li:hover::before {
 
   }
   
-li {
-    position: relative;
-    
-  }
-
 li{
+    position: relative;
     list-style-type: none;
-    padding: 2px 3px;
+    padding: 20px 15px;
 }
 
 a{
@@ -228,20 +226,17 @@ input:checked ~ .toggle .mid_line{
 
 .slide{
     height: 100%;
-    width:195px;
+    width:30%;
     position: absolute;
     transition: 0.5s ease ;
-    transform: translateX(-95px);
+    transform: translateX(50px);
 
 }
 
 input:checked ~ .slide{
-    transform: translateX(-365px);
+    transform: translateX(-330px);
     background-color: rgb(79, 79, 79);
-    border-radius: 10px;
-    margin-top: 2px;
-    width: 180px;
-    height: auto;
+    min-height: 100vh;
 }
 
 .sticky{
@@ -482,27 +477,33 @@ header.sticky ul li a{
 {
 
 header h3{
-    font-size: 1.1em;
+    font-size: 1.3em;
     padding: 10px;
 }
 
 header.sticky h3{
-    font-size: 1.1em;
+    font-size: 1.3em;
    padding: 3px 0 0 0;
 }
 
-.navbarmenu 
+header.sticky
 {
-    font-size: 0.8em;
-    justify-content: start;
-    
+    height: 55px;
 }
 
-
-li{
-    font-size: 17px;
-    
+.navbarmenu  
+{
+    width: auto;
+    font-size: 17.5px;
+    justify-content: center;
+    margin-left: 155px;
 }
+
+.navbarmenu li
+{
+  padding: 0 2px 0 2px;
+}
+
 
 header 
 {
@@ -514,16 +515,28 @@ header
     right: 15px;
 }
 
+input:checked ~ .slide{
+    width: 70%;
+    top:0;
+}
+
+
+#producto 
+{
+width: 100%;
+}
+
 #producto .producto img{
     display: flex;
-    width: 120px;
+    width: 100px;
     height: 100px;
 
 }
 
 #producto .producto.show{
-    width: 120px;
+    width: 92px;
     height: 170px;
+    margin: -9px;
 }
 
 

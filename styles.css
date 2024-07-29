@@ -69,7 +69,7 @@ h4{
 }
 
 ul{
-    font-size: 13px;
+    font-size: 25px;
     font-weight: 600;
 }
 
@@ -100,15 +100,11 @@ li:hover::before {
     transition: transform .3s ease;
   }
   
-li {
-    position: relative;
-    
-  }
 
 li{
-
+    position: relative;
     list-style-type: none;
-    padding: 1px 0;
+    padding: 15px 15px;
 }
 
 a{
@@ -198,19 +194,17 @@ input:checked ~ .toggle .mid_line{
 
 .slide{
     height: 100%;
-    width:195px;
+    width:30%;
     position: absolute;
     transition: 0.5s ease ;
-    transform: translateX(-95px);
+    transform: translateX(50px);
 
 }
 
 input:checked ~ .slide{
-    transform: translateX(-365px);
+    transform: translateX(-330px);
     background-color: rgb(79, 79, 79);
-    border-radius: 10px;
-    margin-top: 2px;
-    width: 180px;
+    min-height: 100vh;
 }
 
 .sticky{
@@ -658,6 +652,18 @@ transition-delay: 0.5s;
     overflow: hidden;
 }
 
+#ubicacion h3
+{
+    font-size: 30px;
+   
+}
+
+#ubicacion h5
+{
+padding: 10px;
+font-size: 20px;
+}
+
 .ubicacion-container::before,
 .ubicacion-container::after {
     content: "";
@@ -896,7 +902,7 @@ transition-delay: 0.5s;
 
 
     #historia{
-    padding: 15px;
+       padding: 15px;
        font-size: 10px;
     }
 
@@ -913,18 +919,28 @@ transition-delay: 0.5s;
 
 .historia-imagenes img {
     width:  150px;
+ margin-right: 10px;
+}
+
+.historia-imagenes p {
+   padding-left: 10px;
 }
 
 .historia-texto h3{
     color: rgb(104, 221, 182);
+    margin-top: -50px;
  }
 
  .historia-texto h3:nth-child(3){
-    margin: 60px 40px 25px 40px;
+    margin: 60px 40px 15px 40px;
+    width: 250px;
  }
+
+ 
 
 .historia.show  p {
        text-align:center; 
+
 }
 
 .historia.show h3{
@@ -943,9 +959,9 @@ transition-delay: 0.5s;
 
 @media (max-width: 900px){
 
-    input:checked ~ .slide{
-       
-        width: 140px;
+
+ input:checked ~ .slide{
+        width: 70%;
     }
 
 .slider
@@ -988,6 +1004,21 @@ inset: 50px 50px 160px 10px;
     left: 27%;
     display: flex;
     gap: 20px;
+}
+
+
+
+#producto .producto img{
+    display: flex;
+    width: 100px;
+    height: 100px;
+
+}
+
+#producto .producto.show{
+    width: 92px;
+    height: 170px;
+    margin: -9px;
 }
 
 }

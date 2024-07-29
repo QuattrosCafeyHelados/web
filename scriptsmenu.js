@@ -45,6 +45,17 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
         { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
         { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
+        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
+        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
+        { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
+        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
+        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
+        { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
         { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" }
     ];
 
@@ -86,7 +97,15 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
         { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
         { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
-        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" }
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
+        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
+        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
+        { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
+        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
+        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" }
+        
     ];
 
     const productos3Container = document.getElementById("productos3");
@@ -128,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
         { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
         { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
-        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" }
+        
     ];
 
     const productos4Container = document.getElementById("productos4");
@@ -170,7 +189,25 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
         { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
         { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
-        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" }
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
+        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
+        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
+        { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
+        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
+        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
+        { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
+        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
+        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
+        { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+        { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
+        { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" },
+
     ];
 
     const productos5Container = document.getElementById("productos5");
