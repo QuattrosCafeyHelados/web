@@ -229,12 +229,12 @@ input:checked ~ .toggle .mid_line{
     width:30%;
     position: absolute;
     transition: 0.5s ease ;
-    transform: translateX(50px);
+    transform: translateX(100px);
 
 }
 
 input:checked ~ .slide{
-    transform: translateX(-400px);
+    transform: translateX(-300px);
     background-color: rgb(79, 79, 79);
     min-height: 100vh;
 }
