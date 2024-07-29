@@ -234,7 +234,7 @@ input:checked ~ .toggle .mid_line{
 }
 
 input:checked ~ .slide{
-    transform: translateX(-330px);
+    transform: translateX(-400px);
     background-color: rgb(79, 79, 79);
     min-height: 100vh;
 }
