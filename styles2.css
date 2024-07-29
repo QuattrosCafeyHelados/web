@@ -495,11 +495,13 @@ header.sticky h3{
 {
     font-size: 0.8em;
     justify-content: start;
-    padding-left: 35px;
+    
 }
 
 
-
+li{
+    font-size: 15px;
+}
 
 header 
 {
