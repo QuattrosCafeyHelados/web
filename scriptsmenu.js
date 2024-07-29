@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productos = [
-        { nombre: "Agua $500", descripcion: "Con o sin gas",imagen: "img/agua.jfif" },
-        { nombre: "Gaseosa", descripcion: "Linea Coca-Cola",imagen: "img/agua.jfif" },
-        { nombre: "Agua saborizada", descripcion: "Aquarius", imagen: "img/gaseosa.jfif" },
+        { nombre: "Agua $1500", descripcion: "Con o sin gas",imagen: "img/agua.jfif" },
+        { nombre: "Gaseosa", descripcion: "Linea Coca-Cola",imagen: "img/gaseosa1.jfif" },
+        { nombre: "Agua saborizada", descripcion: "Aquarius", imagen: "img/aquarius1.jfif" },
         { nombre: "Exprimido", descripcion: "De naranja", imagen: "img/exprimido.jfif" },
         { nombre: "Licuados", descripcion: "Fruta fresca con Leche o Agua", imagen: "img/licuado.jfif" },
         { nombre: "Batido de helado", descripcion: "Leche + Tu helado preferido", imagen: "img/batido.jfif" }
@@ -93,18 +93,18 @@ Container = document.getElementById("productos");
 
 document.addEventListener("DOMContentLoaded", function() {
     const productos3 = [
-        { nombre: "Medialuna", descripcion: "",imagen: "img/cafe.jpg" },
-        { nombre: "Alfajor", descripcion: "Consultar sabores", imagen: "img/batido.jpg" },
-        { nombre: "Alfajor de maicena", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Cookies", descripcion: "Consultar sabores", imagen: "img/cafe.jpg" },
-        { nombre: "Borrachitos", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Muffins", descripcion: "Consultar sabores",imagen: "img/cafe.jpg" },
-        { nombre: "Porcion de budin", descripcion: "Consultar sabores", imagen: "img/batido.jpg" },
-        { nombre: "Brownie", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Pastafrola", descripcion: "", imagen: "img/cafe.jpg" },
-        { nombre: "Tarta de ricota", descripcion: "",imagen: "img/cafe.jpg" },
-        { nombre: "Tarta de coco", descripcion: "", imagen: "img/batido.jpg" },
-        { nombre: "Crumble de manzana", descripcion: "", imagen: "img/alfajor.jpg" }
+        { nombre: "Medialuna", descripcion: "",imagen: "img/medialunas.jfif" },
+        { nombre: "Alfajor", descripcion: "Consultar sabores", imagen: "img/medialunas.JFIF" },
+        { nombre: "Alfajor de maicena", descripcion: "", imagen: "img/medialunas.jfif" },
+        { nombre: "Cookies", descripcion: "Consultar sabores", imagen: "img/medialunas.jfif" },
+        { nombre: "Borrachitos", descripcion: "", imagen: "img/medialunas.jfif" },
+        { nombre: "Muffins", descripcion: "Consultar sabores",imagen: "img/medialunas.jfif" },
+        { nombre: "Porcion de budin", descripcion: "Consultar sabores", imagen: "img/medialunas.jfif" },
+        { nombre: "Brownie", descripcion: "", imagen: "img/medialunas.jfif" },
+        { nombre: "Pastafrola", descripcion: "", imagen: "img/medialunas.jfif" },
+        { nombre: "Tarta de ricota", descripcion: "",imagen: "img/medialunas.jfif" },
+        { nombre: "Tarta de coco", descripcion: "", imagen: "img/medialunas.jfif" },
+        { nombre: "Crumble de manzana", descripcion: "", imagen: "img/medialunas.jfif" }
         
     ];
 
