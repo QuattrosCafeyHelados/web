@@ -343,7 +343,6 @@ header.sticky ul li a{
 
 .wrapper{
     position: absolute;
-    
     transform: translate(-50%, -50%);
     width: fit-content;
     height:auto;
@@ -643,6 +642,12 @@ input:checked ~ .slide{
     top:0;
 }
 
+
+.button
+{
+   width: 300px;
+    left: 60%;
+}
 
 #producto 
 {
