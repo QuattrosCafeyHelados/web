@@ -779,11 +779,7 @@ button:hover span {
     }
 
 
-    .button {
-        width: 300px;
-        left: 70%;
-    }
-
+    
     #producto {
         width: 100%;
     }
@@ -850,7 +846,13 @@ button:hover span {
     .buttonslide {
         left: 34.5%;
         gap: 10px;
-        bottom: -587%;
+        bottom: -399%;
+    }
+
+
+    .button {
+        width: 300px;
+        left: 60%;
     }
 
 
