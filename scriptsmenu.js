@@ -93,18 +93,18 @@ Container = document.getElementById("productos");
 
 document.addEventListener("DOMContentLoaded", function() {
     const productos3 = [
-        { nombre: "Medialuna", descripcion: "",imagen: "img/medialunas.jfif" },
-        { nombre: "Alfajor", descripcion: "Consultar sabores", imagen: "img/medialunas.JFIF" },
-        { nombre: "Alfajor de maicena", descripcion: "", imagen: "img/medialunas.jfif" },
-        { nombre: "Cookies", descripcion: "Consultar sabores", imagen: "img/medialunas.jfif" },
-        { nombre: "Borrachitos", descripcion: "", imagen: "img/medialunas.jfif" },
-        { nombre: "Muffins", descripcion: "Consultar sabores",imagen: "img/medialunas.jfif" },
-        { nombre: "Porcion de budin", descripcion: "Consultar sabores", imagen: "img/medialunas.jfif" },
-        { nombre: "Brownie", descripcion: "", imagen: "img/medialunas.jfif" },
-        { nombre: "Pastafrola", descripcion: "", imagen: "img/medialunas.jfif" },
+        { nombre: "Medialuna", descripcion: "",imagen: "img/medialunas.jpeg" },
+        { nombre: "Alfajor", descripcion: "Consultar sabores", imagen: "img/alfajores.jpeg" },
+        { nombre: "Alfajor de maicena", descripcion: "", imagen: "img/alfajoresdmaicena.jfif" },
+        { nombre: "Cookies", descripcion: "Consultar sabores", imagen: "img/cookies.jpeg" },
+        { nombre: "Cocardos", descripcion: "", imagen: "img/cocardos.jpeg" },
+        { nombre: "Muffins", descripcion: "Consultar sabores",imagen: "img/muffins.jpeg" },
+        { nombre: "Porcion de budin", descripcion: "Consultar sabores", imagen: "img/budin.jpeg" },
+        { nombre: "Brownie", descripcion: "", imagen: "img/brownie.jpeg" },
+        { nombre: "Pastafrola", descripcion: "", imagen: "img/pastafrola1.jpg" },
         { nombre: "Tarta de ricota", descripcion: "",imagen: "img/medialunas.jfif" },
-        { nombre: "Tarta de coco", descripcion: "", imagen: "img/medialunas.jfif" },
-        { nombre: "Crumble de manzana", descripcion: "", imagen: "img/medialunas.jfif" }
+        { nombre: "Tarta de coco", descripcion: "", imagen: "img/tartadecoco.jpeg" },
+        { nombre: "Crumble de manzana", descripcion: "", imagen: "img/crumble.jpeg" }
         
     ];
 
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Tostado de miga", descripcion: "Jamon & queso", imagen: "img/batido.jpg" },
         { nombre: "Porcion de tostadas", descripcion: "2 dips a eleccion: queso-crema/mermelada/ddl", imagen: "img/alfajor.jpg" },
         { nombre: "Sanguche de focaccia", descripcion: "Jamon cocido/crudo o Mortadela & queso", imagen: "img/cafe.jpg" },
-        
+        { nombre: "Scons de queso", descripcion: "", imagen: "img/scons.jpeg" }
     ];
 
     const productos4Container = document.getElementById("productos4");
