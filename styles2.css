@@ -806,7 +806,9 @@ button:hover span {
         left: 130px;
         width: 100px;
         height: 150px;
+        left: 90%;
     }
+
 
     .box .item:nth-child(1) {
         transform: translate3d(-150px, 0, 0) scale(0.8) rotateY(25deg);
@@ -846,7 +848,30 @@ button:hover span {
     .buttonslide {
         left: 34.5%;
         gap: 10px;
-        bottom: -299%;
+        bottom: -340%;
+    }
+
+    .buttonslide span:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: 20px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        rotate: -45deg;
+    }
+    
+    .buttonslide span:last-child::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: initial;
+        right: 20px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        rotate: 135deg;
     }
 
 
