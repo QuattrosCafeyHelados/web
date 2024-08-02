@@ -846,13 +846,13 @@ button:hover span {
     .buttonslide {
         left: 34.5%;
         gap: 10px;
-        bottom: -399%;
+        bottom: -299%;
     }
 
 
     .button {
         width: 300px;
-        left: 60%;
+        left: 65%;
     }
 
 
