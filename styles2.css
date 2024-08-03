@@ -756,11 +756,11 @@ button:hover span {
         width: auto;
         font-size: 17.5px;
         justify-content: center;
-        margin-left: 140px;
+        margin-left: 180px;
     }
 
     .navbarmenu li {
-        padding: 0 3px 0 3px;
+        padding: 0 3px 0 2px;
     }
 
 
@@ -803,7 +803,7 @@ button:hover span {
    }
 
     .box .item {
-        left: 160px;
+        left: 145px;
         width: 100px;
         height: 150px;
         
