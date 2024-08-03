@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productos = [
-        { nombre: "Café Americano", descripcion: "Café negro clásico",imagen: "img/cafe.jpg" },
-        { nombre: "Latte", descripcion: "Café con leche espumada", imagen: "img/batido.jpg" },
-        { nombre: "Capuchino", descripcion: "Café con leche y espuma", imagen: "img/alfajor.jpg" },
+        { nombre: "Café", descripcion: "",imagen: "img/cafe.jpg" },
+        { nombre: "Batidos", descripcion: "", imagen: "img/batido.jpg" },
+        { nombre: "Alfajores", descripcion: "", imagen: "img/alfajor.jpg" },
         { nombre: "Té Verde", descripcion: "Té saludable y refrescante", imagen: "img/cafe.jpg" },
         { nombre: "Pastel de Chocolate", descripcion: "Delicioso pastel de chocolate", imagen: "img/alfajor.jpg" }
     ];

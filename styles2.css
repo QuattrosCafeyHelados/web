@@ -803,7 +803,7 @@ button:hover span {
    }
 
     .box .item {
-        left: 130px;
+        left: 150px;
         width: 100px;
         height: 150px;
         left: 90%;
@@ -852,26 +852,13 @@ button:hover span {
     }
 
     .buttonslide span:before {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        left: 20px;
-        border-top: 2px solid #fff;
-        border-left: 2px solid #fff;
-        rotate: -45deg;
+   
+        rotate: -05deg;
     }
     
     .buttonslide span:last-child::before {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        left: initial;
-        right: 20px;
-        border-top: 2px solid #fff;
-        border-left: 2px solid #fff;
-        rotate: 135deg;
+      
+        rotate: 105deg;
     }
 
 
