@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Alfajor", descripcion: "Consultar sabores", imagen: "img/alfajores.jpeg" },
         { nombre: "Alfajor de maicena", descripcion: "", imagen: "img/alfajoresdmaicena.jfif" },
         { nombre: "Cookies", descripcion: "Consultar sabores", imagen: "img/cookies.jpeg" },
-        { nombre: "Cocardos", descripcion: "", imagen: "img/cocardos.jpeg" },
+        { nombre: "Cocadas", descripcion: "", imagen: "img/cocardos.jpeg" },
         { nombre: "Muffins", descripcion: "Consultar sabores",imagen: "img/muffins.jpeg" },
         { nombre: "Porcion de budin", descripcion: "Consultar sabores", imagen: "img/budin.jpeg" },
         { nombre: "Brownie", descripcion: "", imagen: "img/brownie.jpeg" },
