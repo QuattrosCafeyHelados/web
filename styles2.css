@@ -803,10 +803,10 @@ button:hover span {
    }
 
     .box .item {
-        left: 150px;
+        left: 170px;
         width: 100px;
         height: 150px;
-        left: 90%;
+        
     }
 
 
@@ -846,27 +846,15 @@ button:hover span {
     }
 
     .buttonslide {
-        left: 34.5%;
+        left: 35%;
         gap: 10px;
-        bottom: -340%;
+        bottom: -341%;
     }
-
-    .buttonslide span:before {
-   
-        rotate: -05deg;
-    }
-    
-    .buttonslide span:last-child::before {
-      
-        rotate: 105deg;
-    }
-
 
     .button {
         width: 300px;
         left: 65%;
     }
-
 
     .footer-section.social {
         flex-direction: column;
