@@ -289,7 +289,6 @@ header.sticky ul li a{
     align-items: flex-end;
 }
 
-
 .slider .slides:nth-child(1),
 .slider .slides:nth-child(2){
     position:absolute;
