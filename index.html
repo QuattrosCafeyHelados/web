@@ -123,7 +123,7 @@
                 <h3>Desde un Foodtruck en 2022</h3>
                 
                 <div class="historia-imagenes">
-                    <p>Todo comenzó en 2022 con la idea de un foodtruck. Con pasión y dedicación, fuimos creciendo y conquistando corazones a través de nuestros deliciosos helados. Nuestro sueño finalmente se hizo realidad en 2024 con la inauguración de nuestro local en Mar del Plata.</p> <img src="./img/foodtruck.png" alt="Foodtruck">
+                    <p>Todo comenzó en 2022 con la idea de un foodtruck. Con pasión y dedicación, fuimos creciendo y conquistando corazones a través de nuestros deliciosos helados. Nuestro sueño finalmente se hizo realidad 2 años despues con la inauguración de nuestro local en Mar del Plata.</p> <img src="./img/foodtruck.png" alt="Foodtruck">
                     
                 </div>
                 <h3>Inauguración en Mar del Plata</h3>
@@ -148,7 +148,7 @@
                 <a href="https://www.google.com/maps/place/Padre+Dutto+%26+12+de+Octubre,+Mar+del+Plata,+Provincia+de+Buenos+Aires,+Argentina/@-38.0395675,-57.5534627,17z/data=!3m1!4b1!4m6!3m5!1s0x9584ddd833e23c5b:0xb667cbcf73b10f72!8m2!3d-38.0395718!4d-57.5508824!16s%2Fg%2F11h9w7405m?entry=ttu" ><img src="img/frente.jfif"  alt="Nuestra Cafetería"></a>
             </div>
             <div class="mapa">
-                 <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0856419471947!2d-122.41941528468117!3d37.774929279758095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c9d0429ab%3A0x94a7866a4b0c34db!2sCafeter%C3%ADa!5e0!3m2!1ses!2s!4v1650618097468!5m2!1ses!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                 <iframe  src= "https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=12%20de%20Octubre%203799,%207600%20Mar%20del%20Plata,%20Provincia%20de%20Buenos%20Aires,%20Argentina+(QUATTRO'S%20Caf%C3%A9%20&amp;%20Helados%20Artesanales)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
@@ -166,10 +166,11 @@
               <h2>Sobre Nosotros</h2>
               <p>Bienvenidos a nuestra cafetería, donde servimos café de alta calidad y deliciosos postres. ¡Esperamos verte pronto!</p>
           </div>
+
           <div class="footer-section contact">
               <h2>Contacto</h2>
-              <p><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i> +223 5 211002</p></a>
-              <p><a href="#"><i class="fa fa-inbox" aria-hidden="true"></i> quattros@cafeteria.com</p></a>
+              <p><a href="//wa.me/+542235424533" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> +542235424533</p></a>
+              
           </div>
           <div class="footer-section social">
               <h2>Seguinos!</h2>
@@ -210,6 +211,8 @@
         let slides = document.querySelectorAll('.slides');
         slider.prepend(slides[slides.length -1])
     })
+
+    
 </script>
 
 <!-- slider automatico -->
@@ -218,6 +221,15 @@
             let slides = document.querySelectorAll('.slides');
             slider.appendChild(slides[0]);
         }, 3000);
+
+        function stopAutoplay() {
+   clearInterval(slides);
+}
+
+// Opcional: Detener autoplay cuando el usuario interactúa con los botones de navegación.
+document.querySelectorAll('.prev','.next').forEach(button => {
+    button.addEventListener('click', stopAutoplay);
+});
 </script>
 
 <!-- efecto del boton menu -->

@@ -369,18 +369,27 @@ transform: rotate(315deg) translate(-9px,14px)
     opacity: 0;
 }
 
+.content h2, .content p{
+    background-color: rgb(50, 45, 45);
+    color: white;
+}
+
 .content h2{
     font-size: 4em ;
-    color: #fff;
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: flex-start;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
 }
 .content p{
-    color: #fff;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
     display: flex;
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 19px;
 }
 
 .slider .slides:nth-child(1) .content,

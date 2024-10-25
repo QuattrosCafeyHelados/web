@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productos = [
-        { nombre: "Agua $1500", descripcion: "Con o sin gas",imagen: "img/agua.jfif" },
+        { nombre: "Agua $1500", descripcion: "Con o sin gas",imagen: "img/aguaa.jfif" },
         { nombre: "Gaseosa", descripcion: "Linea Coca-Cola",imagen: "img/gaseosa1.jfif" },
-        { nombre: "Agua saborizada", descripcion: "Aquarius", imagen: "img/aquarius1.jfif" },
+        { nombre: "Agua saborizada", descripcion: "Aquarius", imagen: "img/aquariusvera.jfif" },
         { nombre: "Exprimido", descripcion: "De naranja", imagen: "img/exprimido.jfif" },
         { nombre: "Licuados", descripcion: "Fruta fresca con Leche o Agua", imagen: "img/licuado.jfif" },
         { nombre: "Batido de helado", descripcion: "Leche + Tu helado preferido", imagen: "img/batido.jfif" }
@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Porcion de budin", descripcion: "Consultar sabores", imagen: "img/budin.jpeg" },
         { nombre: "Brownie", descripcion: "", imagen: "img/brownie.jpeg" },
         { nombre: "Pastafrola", descripcion: "", imagen: "img/pastafrola1.jpg" },
-        { nombre: "Tarta de ricota", descripcion: "",imagen: "img/medialunas.jfif" },
         { nombre: "Tarta de coco", descripcion: "", imagen: "img/tartadecoco.jpeg" },
         { nombre: "Crumble de manzana", descripcion: "", imagen: "img/crumble.jpeg" }
         
@@ -144,10 +143,11 @@ Container = document.getElementById("productos");
 document.addEventListener("DOMContentLoaded", function() {
     const productos4 = [
         { nombre: "Medialuna", descripcion: "Jamon & queso",imagen: "img/cafe.jpg" },
-        { nombre: "Tostado de miga", descripcion: "Jamon & queso", imagen: "img/batido.jpg" },
+        { nombre: "Tostado de miga", descripcion: "Jamon & queso", imagen: "img/tostados.jfif" },
         { nombre: "Porcion de tostadas", descripcion: "2 dips a eleccion: queso-crema/mermelada/ddl", imagen: "img/alfajor.jpg" },
-        { nombre: "Sanguche de focaccia", descripcion: "Jamon cocido/crudo o Mortadela & queso", imagen: "img/cafe.jpg" },
-        { nombre: "Scons de queso", descripcion: "", imagen: "img/scons.jpeg" }
+        { nombre: "Sanguche de focaccia", descripcion: "Jamon cocido/crudo o Mortadela & queso", imagen: "img/focacciacrudo.jfif" },
+        { nombre: "Sanguche de Scon de queso", descripcion: "Jamon cocido/crudo o Mortadela & queso", imagen: "img/sanguchescon.jfif" },
+        { nombre: "Scones de queso", descripcion: "El origen de los scones es escocés, son típicos de la cocina inglesa, y su nombre se vincula con La Piedra del Destino: The Stone of Destiny", imagen: "img/scons.jpeg" }
     ];
 
     const productos4Container = document.getElementById("productos4");
