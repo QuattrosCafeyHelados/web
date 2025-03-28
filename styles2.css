@@ -8,7 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: rgba(17, 17, 17, 17);
-    
+
 }
 
 header {
@@ -323,17 +323,22 @@ header.sticky ul li a {
     color: #fff;
 }
 
+#producto .container h3 {
+    font-weight: 500;
+    font-size: 2em;
+}
+
 .producto p {
     color: #fff;
     font-size: 14px;
     padding: 0 10px;
-    
+
 }
 
 .producto.show {
     transform: scale(1);
     opacity: 1;
-    
+
 }
 
 .producto:hover {
@@ -347,8 +352,8 @@ header.sticky ul li a {
 
 
 .heladoslides h3 {
-padding-bottom: 40px;
-padding-top: 0;
+    padding-bottom: 40px;
+    padding-top: 0;
 }
 
 .box {
@@ -479,7 +484,7 @@ padding-top: 0;
 }
 
 .button {
-    
+
     width: 390px;
     height: 70px;
     bottom: -180px;
@@ -743,6 +748,7 @@ button:hover span {
 
 @media (max-width: 900px) {
 
+
     header h3 {
         font-size: 1.3em;
         padding: 10px;
@@ -774,8 +780,14 @@ button:hover span {
     }
 
     .toggle {
-        top: 20px;
+        top: 7px;
         right: 15px;
+    }
+
+    header.sticky .toggle {
+
+        top: 4px;
+        right: 4px;
     }
 
     input:checked~.slide {
@@ -783,8 +795,10 @@ button:hover span {
         top: 0;
     }
 
+    .producto h2 {
+        font-size: 1em;
+    }
 
-    
     #producto {
         width: 100%;
     }
@@ -802,16 +816,16 @@ button:hover span {
     }
 
 
-   .box{
-    width: 150px;
-    height: 150px;
-   }
+    .box {
+        width: 150px;
+        height: 150px;
+    }
 
     .box .item {
         left: 147px;
         width: 100px;
         height: 150px;
-        
+
     }
 
 
@@ -819,32 +833,32 @@ button:hover span {
         transform: translate3d(-150px, 0, 0) scale(0.8) rotateY(25deg);
         z-index: 1;
     }
-    
+
     .box .item:nth-child(2) {
         transform: translate3d(-150px, 0, 0) scale(0.8) rotateY(25deg);
         z-index: 2;
     }
-    
+
     .box .item:nth-child(3) {
         transform: translate3d(-80px, 0, 0) scale(0.9) rotateY(15deg);
         z-index: 3;
     }
-    
+
     .box .item:nth-child(4) {
         transform: translate3d(0px, 0, 0) scale(1) rotateY(0deg);
         z-index: 4;
     }
-    
+
     .box .item:nth-child(5) {
         transform: translate3d(80px, 0, 0) scale(0.9) rotateY(-15deg);
         z-index: 3;
     }
-    
+
     .box .item:nth-child(6) {
         transform: translate3d(150px, 0, 0) scale(0.8) rotateY(-25deg);
         z-index: 2;
     }
-    
+
     .box .item:nth-child(7) {
         transform: translate3d(150px, 0, 0) scale(0.8) rotateY(-25deg);
         z-index: -1;

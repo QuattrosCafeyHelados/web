@@ -1,4 +1,85 @@
-document.addEventListener("DOMContentLoaded", function() {
+let sliderInterval;
+let idleTimeout;
+
+const sliderElement = document.querySelector(".slider"); // Contenedor del slider
+const slides = document.querySelectorAll(".slides");
+let isTransitioning = false; 
+
+// Función para mover el slider
+function fntExecuteSlide(direction) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+
+    if (direction === "next") {
+        let firstSlide = sliderElement.firstElementChild;
+        firstSlide.classList.add("slide-out");
+
+        setTimeout(() => {
+            sliderElement.appendChild(firstSlide); 
+            firstSlide.classList.remove("slide-out");
+            isTransitioning = false;
+        }, 500);
+    } else if (direction === "prev") {
+        let lastSlide = sliderElement.lastElementChild;
+        sliderElement.insertBefore(lastSlide, sliderElement.firstElementChild);
+        lastSlide.classList.add("slide-in");
+
+        setTimeout(() => {
+            lastSlide.classList.remove("slide-in");
+            isTransitioning = false;
+        }, 500);
+    }
+}
+
+// Función para iniciar el autoplay
+function startSlider() {
+    stopSlider(); // Detiene cualquier autoplay en ejecución
+    sliderInterval = setInterval(() => {
+        fntExecuteSlide("next");
+    }, 5000);
+}
+
+// Función para detener el autoplay
+function stopSlider() {
+    clearInterval(sliderInterval);
+}
+
+// Función para reiniciar el autoplay después de inactividad
+function resetIdleTimeout() {
+    clearTimeout(idleTimeout);
+    idleTimeout = setTimeout(() => {
+        console.log("🔄 Reiniciando autoplay...");
+        startSlider();
+    }, 3000); // **Ahora se reiniciará después de 3 segundos**
+}
+
+// Iniciar el slider al cargar la página
+if (sliderElement) {
+    startSlider();
+
+    // Pausar autoplay cuando el usuario pase el mouse
+    sliderElement.addEventListener("mouseover", stopSlider);
+
+    // Reiniciar autoplay cuando el usuario retire el mouse
+    sliderElement.addEventListener("mouseout", resetIdleTimeout);
+}
+
+// Botones de navegación
+document.querySelector(".prev").addEventListener("click", () => {
+    fntExecuteSlide("prev");
+    stopSlider();
+    resetIdleTimeout();
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+    fntExecuteSlide("next");
+    stopSlider();
+    resetIdleTimeout();
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const productos = [
         { nombre: "Bebidas", descripcion: "", imagen: "img/aguaa.jfif" },
         { nombre: "Cafeteria", descripcion: "", imagen: "img/batido.jpg" },
@@ -26,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-Container = document.getElementById("productos");
+    Container = document.getElementById("productos");
 
     // Crear un IntersectionObserver
     const observer = new IntersectionObserver((entries, observer) => {
@@ -38,7 +119,7 @@ Container = document.getElementById("productos");
         });
     }, { threshold: 1 });  // El umbral es del 100%
 
-   
+
 
     // Crear un IntersectionObserver para la sección de ubicación
     const ubicacionElement = document.querySelector('.ubicacion');
@@ -56,7 +137,7 @@ Container = document.getElementById("productos");
 
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const productos = document.querySelectorAll('.producto');
     const ubicacion = document.querySelector('.ubicacion');
     const historia = document.querySelector('.historia');
@@ -100,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
     mostrarHistoria();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const historiaContainer = document.querySelector('.historia-container');
     const historia = document.querySelector('.historia');
     const historiaTexto = document.querySelector('.historia-texto');
@@ -124,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
     mostrarHistoria();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const tituloHistoria = document.querySelector('.titulo-historia');
     const historia = document.querySelector('.historia');
     const historiaTexto = document.querySelector('.historia-texto');

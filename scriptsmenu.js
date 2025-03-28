@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Brownie", descripcion: "", imagen: "img/brownie.jpeg" },
         { nombre: "Pastafrola", descripcion: "", imagen: "img/pastafrola1.jpg" },
         { nombre: "Tarta de coco", descripcion: "", imagen: "img/tartadecoco.jpeg" },
-        { nombre: "Crumble de manzana", descripcion: "", imagen: "img/crumble.jpeg" }
+        { nombre: "Crumble manzana", descripcion: "", imagen: "img/crumble.jpeg" }
         
     ];
 
@@ -145,8 +145,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Medialuna", descripcion: "",imagen: "img/cafe.jpg" },
         { nombre: "Tostado de miga", descripcion: "", imagen: "img/tostados.jfif" },
         { nombre: "Porcion de tostadas", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Sanguche de focaccia", descripcion: "", imagen: "img/focacciacrudo.jfif" },
-        { nombre: "Sanguche de Scon de queso", descripcion: "", imagen: "img/sanguchescon.jfif" },
+        { nombre: "Sanguche focaccia", descripcion: "", imagen: "img/focacciacrudo.jfif" },
+        { nombre: "Sanguche de Scon", descripcion: "", imagen: "img/sanguchescon.jfif" },
         { nombre: "Scones de queso", descripcion: "", imagen: "img/scons.jpeg" }
     ];
 
