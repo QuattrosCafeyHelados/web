@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productos = [
-        { nombre: "Agua", descripcion: "",imagen: "img/aguaa.jfif" },
+        { nombre: "Agua", descripcion: "",imagen: "img/agua.jfif" },
         { nombre: "Gaseosa", descripcion: "",imagen: "img/gaseosa1.jfif" },
         { nombre: "Agua saborizada", descripcion: "", imagen: "img/aquariusvera.jfif" },
         { nombre: "Exprimido", descripcion: "", imagen: "img/exprimido.jfif" },
