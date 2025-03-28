@@ -8,6 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: rgba(17, 17, 17, 17);
+    
 }
 
 header {
@@ -294,7 +295,7 @@ header.sticky ul li a {
 }
 
 .producto {
-    background-color: #fff;
+    background-color: #111;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px;
@@ -317,19 +318,22 @@ header.sticky ul li a {
 
 .producto h2 {
     margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 1.8em;
+    font-weight: 100;
+    color: #fff;
 }
 
 .producto p {
-    color: #777;
+    color: #fff;
     font-size: 14px;
     padding: 0 10px;
+    
 }
 
 .producto.show {
     transform: scale(1);
     opacity: 1;
-
+    
 }
 
 .producto:hover {

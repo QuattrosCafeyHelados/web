@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productos = [
-        { nombre: "Bebidas", descripcion: " '' Gaseosa - Agua saborizada - Agua mineral - Exprimido... '' ",imagen: "img/aguaa.jfif" },
-        { nombre: "Cafeteria", descripcion: "'' Espresso - Americano - Cortado - Lágrima - Cafe con leche - Capuccino - Frappe... ''", imagen: "img/batido.jpg" },
-        { nombre: "Dulce", descripcion: "'' Medialuna - Alfajor - Cookie - Budin - Cocada - Brownie con helado - Pastafrola... ''", imagen: "img/pastaforla.jfif" },
-        { nombre: "Salado", descripcion: "'' Medialuna - Tostado de miga - Scon de queso - Sandwich de focaccia ''", imagen: "img/scones.jfif" },
-        { nombre: "Helados", descripcion: " '' Super DDL - Choco 70% - Balcarce - Tiramisu - Lemon Pie - Mascarpone... ''", imagen: "img/balcarce.jfif" }
+        { nombre: "Bebidas", descripcion: "", imagen: "img/aguaa.jfif" },
+        { nombre: "Cafeteria", descripcion: "", imagen: "img/batido.jpg" },
+        { nombre: "Dulce", descripcion: "", imagen: "img/pastaforla.jfif" },
+        { nombre: "Salado", descripcion: "", imagen: "img/scones.jfif" },
+        { nombre: "Helados", descripcion: "", imagen: "img/balcarce.jfif" }
     ];
 
     const productosContainer = document.getElementById("productos");
