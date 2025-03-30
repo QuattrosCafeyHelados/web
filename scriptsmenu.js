@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productos = [
-        { nombre: "Agua", descripcion: "",imagen: "img/agua.jfif" },
-        { nombre: "Gaseosa", descripcion: "",imagen: "img/gaseosa1.jfif" },
+        { nombre: "Agua", descripcion: "",imagen: "img/aguaa.jfif" },
+        { nombre: "Gaseosa", descripcion: "",imagen: "img/gaseosas.jfif" },
         { nombre: "Agua saborizada", descripcion: "", imagen: "img/aquariusvera.jfif" },
         { nombre: "Exprimido", descripcion: "", imagen: "img/exprimido.jfif" },
         { nombre: "Licuados", descripcion: "", imagen: "img/licuado.jfif" },
@@ -42,21 +42,21 @@ Container = document.getElementById("productos");
 
 document.addEventListener("DOMContentLoaded", function() {
     const productos2 = [
-        { nombre: "Expresso", descripcion: "",imagen: "img/cafe.jpg" },
-        { nombre: "Americano", descripcion: "", imagen: "img/batido.jpg" },
-        { nombre: "Cortado", descripcion: "", imagen: "img/cafe.jpg" },
-        { nombre: "Cortado doble", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Café con leche", descripcion: "",imagen: "img/cafe.jpg" },
-        { nombre: "Lagrima", descripcion: "", imagen: "img/batido.jpg" },
-        { nombre: "Lagrima doble", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Capuccino", descripcion: "", imagen: "img/cafe.jpg" },
-        { nombre: "Submarino", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Affogato", descripcion: "",imagen: "img/cafe.jpg" },
-        { nombre: "Café frappe", descripcion: "", imagen: "img/batido.jpg" },
-        { nombre: "Té", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Vaso de leche", descripcion: "", imagen: "img/cafe.jpg" },
-        { nombre: "Leche de almendras", descripcion: "", imagen: "img/alfajor.jpg" },
-        { nombre: "Crema", descripcion: "", imagen: "img/alfajor.jpg" }
+        { nombre: "Expresso", descripcion: "",imagen: "img/espresso.jfif" },
+        { nombre: "Americano", descripcion: "", imagen: "img/americano.jfif" },
+        { nombre: "Cortado", descripcion: "", imagen: "img/cortado.jfif" },
+        { nombre: "Cortado doble", descripcion: "", imagen: "img/cortado-doble.jfif" },
+        { nombre: "Café con leche", descripcion: "",imagen: "img/cafe-con-leche.jfif" },
+        { nombre: "Lagrima", descripcion: "", imagen: "img/lagrima.jfif" },
+        { nombre: "Lagrima doble", descripcion: "", imagen: "img/lagrima-doble.jfif" },
+        { nombre: "Capuccino", descripcion: "", imagen: "img/capuccino.jfif" },
+        { nombre: "Submarino", descripcion: "", imagen: "img/submarino.jfif" },
+        { nombre: "Affogato", descripcion: "",imagen: "img/affogato.jfif" },
+        { nombre: "Café frappe", descripcion: "", imagen: "img/cafe-frappe.jfif" },
+        { nombre: "Té", descripcion: "", imagen: "img/te.jfif" },
+        { nombre: "Vaso de leche", descripcion: "", imagen: "img/leche.jfif" },
+        { nombre: "Leche de almendras", descripcion: "", imagen: "img/leche-de-almendras.jfif" },
+        { nombre: "Crema", descripcion: "", imagen: "img/crema.jfif" }
     ];
 
     const productos2Container = document.getElementById("productos2");
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Muffins", descripcion: "",imagen: "img/muffins.jpeg" },
         { nombre: "Porcion de budin", descripcion: "", imagen: "img/budin.jpeg" },
         { nombre: "Brownie", descripcion: "", imagen: "img/brownie.jpeg" },
-        { nombre: "Pastafrola", descripcion: "", imagen: "img/pastafrola1.jpg" },
+        { nombre: "Pastafrola", descripcion: "", imagen: "img/pastrafrola-porcion.jfif" },
         { nombre: "Tarta de coco", descripcion: "", imagen: "img/tartadecoco.jpeg" },
         { nombre: "Crumble manzana", descripcion: "", imagen: "img/crumble.jpeg" }
         
@@ -142,11 +142,11 @@ Container = document.getElementById("productos");
 
 document.addEventListener("DOMContentLoaded", function() {
     const productos4 = [
-        { nombre: "Medialuna", descripcion: "",imagen: "img/cafe.jpg" },
+        { nombre: "Medialuna", descripcion: "",imagen: "img/medialungas.jfif" },
         { nombre: "Tostado de miga", descripcion: "", imagen: "img/tostados.jfif" },
-        { nombre: "Porcion de tostadas", descripcion: "", imagen: "img/alfajor.jpg" },
+        { nombre: "Porcion de tostadas", descripcion: "", imagen: "img/tostadas.jfif" },
         { nombre: "Sanguche focaccia", descripcion: "", imagen: "img/focacciacrudo.jfif" },
-        { nombre: "Sanguche de Scon", descripcion: "", imagen: "img/sanguchescon.jfif" },
+        { nombre: "Sanguche de Scon", descripcion: "", imagen: "img/sangu-de-scon.jfif" },
         { nombre: "Scones de queso", descripcion: "", imagen: "img/scons.jpeg" }
     ];
 

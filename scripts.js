@@ -81,9 +81,9 @@ document.querySelector(".next").addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const productos = [
-        { nombre: "Bebidas", descripcion: "", imagen: "img/agua.jfif" },
-        { nombre: "Cafeteria", descripcion: "", imagen: "img/batido.jpg" },
-        { nombre: "Dulce", descripcion: "", imagen: "img/pastaforla.jfif" },
+        { nombre: "Bebidas", descripcion: "", imagen: "img/aguaa.jfif" },
+        { nombre: "Cafeteria", descripcion: "", imagen: "img/cafeteria.jfif" },
+        { nombre: "Dulce", descripcion: "", imagen: "img/dulce.jfif" },
         { nombre: "Salado", descripcion: "", imagen: "img/scones.jfif" },
         { nombre: "Helados", descripcion: "", imagen: "img/balcarce.jfif" }
     ];

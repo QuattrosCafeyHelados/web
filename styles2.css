@@ -45,7 +45,7 @@ h3 {
     font-weight: 800;
     justify-content: center;
     text-align: center;
-    color: aquamarine;
+    color: rgb(60, 172, 135);
     padding: 20px 20px;
     text-transform: uppercase;
 }
@@ -56,7 +56,7 @@ header h3 {
 }
 
 h4 {
-    color: aquamarine;
+    color: red;
 }
 
 ul {
@@ -102,11 +102,9 @@ li::before {
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: black;
-    border-radius: 15px;
+    background-color: rgb(60, 172, 135);
     z-index: -1;
     transition: transform .3s ease;
-
 }
 
 li {
@@ -124,13 +122,14 @@ i {
 }
 
 navbar a {
-    color: aquamarine;
+    color: #555;
 
 }
 
 .navbarmenu li::before {
     transform: scaleX(0);
     transform-origin: bottom right;
+    
 }
 
 .navbarmenu li:hover::before {
@@ -147,12 +146,16 @@ navbar a {
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: rgb(101, 101, 101);
+    background: black;
+    
     border-radius: 15px;
     z-index: -1;
     transition: transform .3s ease;
 }
 
+.navbarmenu li a {
+    color: rgb(60, 172, 135);
+}
 
 input {
     display: none;
@@ -160,6 +163,8 @@ input {
     appearance: none;
     -webkit-appearance: none;
 }
+
+
 
 .toggle {
     position: absolute;
@@ -170,7 +175,7 @@ input {
     z-index: 1;
     cursor: pointer;
     border-radius: 2px;
-    background-color: rgb(0, 240, 180);
+    background-color: rgb(60, 172, 135);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
@@ -179,7 +184,7 @@ input {
     position: absolute;
     height: 2px;
     width: 20px;
-    background-color: rgb(0, 185, 136);
+    background-color:#555;
     border-radius: 50px;
     transition: 0.3s ease;
 }
@@ -230,12 +235,12 @@ input:checked~.toggle .mid_line {
     position: absolute;
     transition: 0.5s ease;
     transform: translateX(500px);
-
+    
 }
 
 input:checked~.slide {
     transform: translateX(-300px);
-    background-color: rgb(79, 79, 79);
+    background-color: white;
     min-height: 100vh;
 }
 
@@ -264,7 +269,17 @@ header.sticky input:checked~.slide {
 
 header.sticky ul li a {
     transition: 0.6s;
-    color: white;
+    color: white
+}
+
+navbar.sticky ul li a {
+    color: #555
+}
+
+
+.navbar {
+    transition: 0.6s;
+    color: black
 }
 
 
@@ -306,6 +321,10 @@ header.sticky ul li a {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+#producto h3 {
+    color: rgb(60, 172, 135);;
+}
+
 .producto img {
     width: 100%;
     height: auto;
@@ -325,7 +344,7 @@ header.sticky ul li a {
 
 #producto .container h3 {
     font-weight: 500;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .producto p {
@@ -354,6 +373,9 @@ header.sticky ul li a {
 .heladoslides h3 {
     padding-bottom: 40px;
     padding-top: 0;
+    color: rgb(60, 172, 135);
+    font-size: 3em;
+    font-weight: 500;
 }
 
 .box {
