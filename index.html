@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <title>Quattro's Heladeria Artesanal</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+        <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div><a href="#home" rel="">
+                <h3>Quattro's</h3>
+            </a></div>
+        <div>
+            <label>
+                <input type="checkbox">
+                <div class="toggle">
+                    <span class="top_line common"></span>
+                    <span class="mid_line common"></span>
+                    <span class="bottom_line common"></span>
+                </div>
+
+                <navbar class="slide">
+                    <ul>
+                        <li><a href="#home" rel=""><i aria-hidden="true"></i> Home</a></li>
+                        <li><a href="#helados" rel=""><i aria-hidden="true"></i> Helados</a>
+                        </li>
+                        <li><a href="#producto" rel=""><i aria-hidden="true"></i> Productos</a>
+                        </li>
+                        <li><a href="#historia" rel=""><i aria-hidden="true"></i> Historia</a></li>
+                        <li><a href="#ubicacion" rel=""><i aria-hidden="true"></i>
+                                Encontranos</a></li>
+                        <li><a href="#footer" rel=""><i aria-hidden="true"></i> Contactos</a></li>
+                    </ul>
+                </navbar>
+            </label>
+        </div>
+    </header>
+
+    <section id="home"> </section>
+
+    <section id="helados" data-aos="fade-up">
+
+        <div class="slides-container">
+            <div class="slider">
+                <div class="slides" style="--img: url('img/ddl.jfif') ">
+                    <div class="content">
+                        <h2>Super DDL</h2>
+                        <p>
+                            La dulzura del dulce de leche se mezcla con la frescura de la crema, creando un perfecto
+                            equilibrio entre suavidad y vivacidad.</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img/choco70.jfif')">
+                    <div class="content">
+                        <h2>Chocolate 70%</h2>
+                        <p>
+                            El helado de chocolate 70 combina dulzura y profundidad. Su sabor intenso se derrite y
+                            encanta a amantes del chocolate.</p>
+                    </div>
+                </div>
+                <div class="slides 3" style="--img: url('img/balcarce.jfif')">
+                    <div class="content">
+                        <h2>Balcarce</h2>
+                        <p>
+                            Este helado con base de vainilla presenta un bizcocho suave, con crema dulce de leche,
+                            merengues crujientes, crema batida y nueces
+                        </p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img/lemonpie.jfif')">
+                    <div class="content">
+                        <h2>Lemon Pie</h2>
+                        <p>
+                            El Lemon Pie, helado con frescura cítrica, dulzura indulgente, y textura extravagante,
+                            evocando un verano soleado en Capri. </p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img/tiramisu.jfif')">
+                    <div class="content">
+                        <h2>Tiramisú</h2>
+                        <p>
+                            El helado de tiramisú mezcla mascarpone, café y bizcocho, evocando tradición. Cada bocado
+                            trae frescura y cacao amargo.</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img/mascarpone.jfif')">
+                    <div class="content">
+                        <h2>Mascarpone</h2>
+                        <p>
+                            El helado de mascarpone combina suavidad y frescor, con frutos del bosque. Cada cucharada es
+                            pura intensidad dulce..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="producto" data-aos="fade-up">
+
+        <div class="container" data-aos="fade-left" data-aos-delay="200">
+            <h1>Nuestros Productos</h1>
+            <div id="productos" class="productos">
+                <!-- Los productos se insertarán aquí dinámicamente -->
+            </div>
+
+            <a class="showhide" href="menu.html">Ver todo</a>
+        </div>
+
+    </section>
+
+    <section id="historia" class="section reveal-left" data-aos="zoom-in">
+        <div class="historia-container">
+            <h2 class="titulo-historia"></h2>
+            <div class="historia">
+                <!-- PRIMER BLOQUE -->
+                <div class="historia-item reveal-left">
+                    <div class="historia-texto">
+                        <h3>Desde un Foodtruck en 2022</h3>
+                        <p>Todo comenzó en 2022 con la idea de un foodtruck. Con pasión y dedicación, fuimos creciendo y
+                            conquistando corazones a través de nuestros deliciosos helados. Nuestro sueño finalmente se
+                            hizo realidad 2 años después con la inauguración de nuestro local en Mar del Plata.</p>
+                    </div>
+                    <div class="historia-imagenes reveal-right">
+                        <img src="./img/foodtruck.png" alt="Foodtruck"  data-aos="zoom-in" data-aos-delay="300">
+                    </div>
+                </div>
+
+                <!-- SEGUNDO BLOQUE -->
+                <div class="historia-item reveal-left">
+                    <div class="historia-texto">
+                        <h3>Inauguración en Mar del Plata</h3>
+                        <p>En 2024, abrimos las puertas de nuestra cafetería en Mar del Plata, llevando nuestras
+                            creaciones a un nuevo nivel y brindando un espacio acogedor para que todos puedan disfrutar
+                            de nuestros productos.</p>
+                    </div>
+                    <div class="historia-imagenes reveal-right">
+                        <img src="./img/nuevo.jfif" alt="Local en Mar del Plata"  data-aos="zoom-in" data-aos-delay="300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <section id="ubicacion" class="section reveal-right" data-aos="fade-right">
+
+        <div class="ubicacion-container">
+            <h3>Ubicacion</h3>
+
+            <div class="ubicacion">
+                <div class="ubicacion-imagen">
+                    <a
+                        href="https://www.google.com/maps/place/Padre+Dutto+%26+12+de+Octubre,+Mar+del+Plata,+Provincia+de+Buenos+Aires,+Argentina/@-38.0395675,-57.5534627,17z/data=!3m1!4b1!4m6!3m5!1s0x9584ddd833e23c5b:0xb667cbcf73b10f72!8m2!3d-38.0395718!4d-57.5508824!16s%2Fg%2F11h9w7405m?entry=ttu"><img
+                            src="img/frente.jfif" alt="Nuestra Cafetería"></a>
+                </div>
+                <div class="mapa">
+                    <iframe
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=12%20de%20Octubre%203799,%207600%20Mar%20del%20Plata,%20Provincia%20de%20Buenos%20Aires,%20Argentina+(QUATTRO'S%20Caf%C3%A9%20&amp;%20Helados%20Artesanales)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <h5>Padre Dutto y 12 de Octubre - MDQ</h5>
+        </div>
+
+    </section>
+
+    <footer id="footer" class="footer" class="section reveal" data-aos="fade-up">
+
+        <div class="footer-decorations">
+            <div class="footer-decoration"></div>
+            <div class="footer-decoration"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Sobre Nosotros</h2>
+                <p>Bienvenidos a nuestra cafetería, donde servimos café de alta calidad y deliciosos postres. ¡Esperamos
+                    verte pronto!</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p><a href="//wa.me/+542235424533" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                        +54 223 5424533</p></a>
+
+            </div>
+            <div class="footer-section social">
+                <h2>Seguinos!</h2>
+
+                <div class="social-icons"><br>
+                    <a href="https://www.instagram.com/quattroshelados?igsh=MXU0aGt2MGVnNXluaA==" target="_blank"> <img
+                            src="img/instagram-removebg-preview.png"></img></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Quattro's Cafe, Pasteleria & Helados. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <!-- Este script transforma en sticky al header cuando scrolleas hacia abajo -->
+    <script type="text/javascript">
+        window - addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Cargar FontAwesome -->
+
+    <!-- este hace funcionar el slider -->
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0])
+        })
+        prev.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1])
+        })
+
+
+    </script>
+    <script>
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
+    <!-- slider automatico -->
+    <!-- <script>
+        setInterval(function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        }, 3000);
+
+        function stopAutoplay() {
+            clearInterval(slides);
+        }
+
+        // Opcional: Detener autoplay cuando el usuario interactúa con los botones de navegación.
+        document.querySelectorAll('.prev', '.next').forEach(button => {
+            button.addEventListener('click', stopAutoplay);
+        });
+    </script> -->
+
+    <!-- efecto del boton menu -->
+    <script>
+        document.querySelectorAll('.showhide').forEach(link => {
+            link.innerHTML = link.innerText.split('').map
+                ((letters, i) => {
+                    if (letters === ' ') {
+                        return ' ';
+                    } else {
+                        return `<span style="transition-delay:${i * 50}ms">${letters}</span>`
+                    }
+                }).join('');
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
