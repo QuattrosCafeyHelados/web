@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
@@ -984,8 +985,8 @@ header.sticky ul li a {
 .reveal-left.active,
 .reveal-right.active,
 .reveal-up.active {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  transform: scale(1.02) translateY(0) translateX(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02) translateY(0) translateX(0);
 }
 
 @media (min-width: 768px) {
