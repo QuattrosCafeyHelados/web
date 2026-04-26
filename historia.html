@@ -140,8 +140,7 @@
           <div class="absolute -top-4 -left-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl"></div>
           <div
             class="rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
-            <img alt="Foodtruck Violeta" class="w-full h-[350px] object-cover"
-              src="img/foodtruck.png" />
+            <img alt="Foodtruck Violeta" class="w-full h-[350px] object-cover" src="img/foodtruck.png" />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-surface-container-lowest p-4 rounded-xl shadow-xl max-w-[160px]">
             <p class="font-headline font-bold text-primary text-xl">2022</p>
@@ -187,17 +186,17 @@
             mesas, cuenta nuestra historia.
           </p>
           <div class="pt-2">
-            <button
-              class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-primary-container transition-colors shadow-lg shadow-primary/20">
+            <a href="https://www.google.com/maps/search/?api=1&query=QUATTROS+Cafe+Helados+Mar+del+Plata"
+              target="_blank"
+              class="inline-block bg-primary text-on-primary px-6 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-primary-container transition-colors shadow-lg shadow-primary/20">
               Visitá nuestro local
-            </button>
+            </a>
           </div>
         </div>
         <div class="w-full lg:w-1/2 relative">
           <div
             class="rounded-2xl overflow-hidden shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500 border-8 border-surface-container-lowest">
-            <img alt="Interior Cálido" class="w-full h-[350px] object-cover"
-              src="img/nuevo.jfif" />
+            <img alt="Interior Cálido" class="w-full h-[350px] object-cover" src="img/nuevo.jfif" />
           </div>
           <div class="absolute -top-6 -right-4 hidden md:block">
             <div
@@ -231,19 +230,21 @@
   </main>
 
   <!-- BottomNavBar (Mobile Only) -->
-  <nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fef8f4]/90 backdrop-blur-xl flex justify-around items-center px-8 py-3 pb-safe z-50 rounded-t-3xl border-t border-[#795746]/10 shadow-[0_-4px_20px_rgba(121,87,70,0.05)]">
-      <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="index.html">
-          <span class="material-symbols-outlined">home</span>
-          <span class="text-[11px] font-medium uppercase mt-1">Inicio</span>
-      </a>
-      <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="menu.html">
-          <span class="material-symbols-outlined">restaurant_menu</span>
-          <span class="text-[11px] font-medium uppercase mt-1">Menú</span>
-      </a>
-      <a class="flex flex-col items-center justify-center text-[#22686c] bg-[#88c9cd]/20 rounded-xl px-4 py-1" href="historia.html">
-          <span class="material-symbols-outlined">menu_book</span>
-          <span class="text-[11px] font-medium uppercase mt-1">Historia</span>
-      </a>
+  <nav
+    class="md:hidden fixed bottom-0 left-0 w-full bg-[#fef8f4]/90 backdrop-blur-xl flex justify-around items-center px-8 py-3 pb-safe z-50 rounded-t-3xl border-t border-[#795746]/10 shadow-[0_-4px_20px_rgba(121,87,70,0.05)]">
+    <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="index.html">
+      <span class="material-symbols-outlined">home</span>
+      <span class="text-[11px] font-medium uppercase mt-1">Inicio</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="menu.html">
+      <span class="material-symbols-outlined">restaurant_menu</span>
+      <span class="text-[11px] font-medium uppercase mt-1">Menú</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-[#22686c] bg-[#88c9cd]/20 rounded-xl px-4 py-1"
+      href="historia.html">
+      <span class="material-symbols-outlined">menu_book</span>
+      <span class="text-[11px] font-medium uppercase mt-1">Historia</span>
+    </a>
   </nav>
 
   <script type="module">
@@ -287,6 +288,57 @@
       }
     });
   </script>
+
+  <script>
+    document.querySelectorAll('a[href="historia.html"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // Aggiunge "reveal" automaticamente a tutti i blocchi principali
+  document.querySelectorAll('section, .product-card, h2, h3, footer').forEach(el => {
+    el.classList.add('reveal');
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
 
 </body>
 
