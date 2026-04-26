@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <title>Menú Digital | QUATTRO'S Cafè & Helados</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@400;500;600&family=Jost:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#75584a",
+            "secondary": "#795746",
+            "on-secondary-container": "#7a5747",
+            "primary-container": "#88c9cd",
+            "on-surface": "#3a2418",
+            "surface": "#fef8f4",
+            "on-surface-variant": "#5c3d2e",
+            "primary": "#22686c",
+            "background": "#fef8f4",
+            "outline-variant": "#bfc8c9",
+            "surface-container-high": "#ece7e3",
+          },
+          fontFamily: {
+            "headline": ["Epilogue", "sans-serif"],
+            "body": ["Jost", "sans-serif"],
+            "label": ["Plus Jakarta Sans", "sans-serif"],
+            "accent": ["Pinyon Script", "cursive"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px -1px rgba(58, 36, 24, 0.05);
+      height: auto;
+    }
+
+    .active-category {
+      background-color: #88c9cd !important;
+      color: #03565a !important;
+    }
+
+    [v-cloak] {
+      display: none;
+    }
+
+    /* Skeleton loader */
+    .skeleton {
+      background: linear-gradient(90deg, #ece7e3 25%, #f8f3ef 50%, #ece7e3 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 0.5rem;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .desktop-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+      }
+
+      .desktop-product-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 1rem;
+        display: flex;
+      }
+
+      .desktop-product-image {
+        display: block !important;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        background-color: #f3f4f6;
+      }
+
+      .desktop-product-content {
+        padding: 1.25rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        min-height: 100px;
+      }
+
+      .desktop-helados-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+      }
+
+      .flavor-grid-item {
+        height: 56px;
+        background-color: #efeae6;
+        border: 1px solid #d9d0c8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease;
+        width: 100%;
+      }
+
+      .flavor-grid-item:hover {
+        background-color: #d9d0c8;
+      }
+
+      .flavor-text {
+        font-family: 'Jost', sans-serif;
+        font-size: 0.875rem;
+        color: #5c3d2e;
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .desktop-grid {
+        align-items: start;
+      }
+    }
+
+    .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 15;
+}
+
+  </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+
+  <div id="app" v-cloak>
+
+    <!-- Desktop Header -->
+    <header class="fixed top-0 w-full z-50 bg-[#fef8f4]/80 backdrop-blur-md border-b border-secondary/5">
+      <div class="max-w-[1280px] mx-auto flex justify-between items-center px-6 lg:px-12 py-4 w-full">
+        <h1 id="logo"
+          class="font-headline font-bold text-[#3a2418] text-xl lg:text-2xl tracking-tighter uppercase cursor-pointer select-none">
+          QUATTRO'S Cafè & Helados</h1>
+        <nav class="hidden lg:flex items-center gap-10">
+          <a class="font-headline font-bold text-secondary text-sm uppercase tracking-widest hover:text-primary transition-colors"
+            href="index.html">Inicio</a>
+          <a class="font-headline font-bold text-secondary text-sm uppercase tracking-widest hover:text-primary transition-colors"
+            href="menu.html">Menú</a>
+          <a class="font-headline font-bold text-secondary text-sm uppercase tracking-widest hover:text-primary transition-colors"
+            href="historia.html">Nuestra Historia</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Header -->
+    <header
+      class="md:hidden fixed top-0 w-full z-50 bg-[#fef8f4]/80 backdrop-blur-md flex justify-center items-center px-6 py-4">
+      <h1 class="font-bold text-[#3a2418] text-xl tracking-tighter uppercase font-headline">QUATTRO'S Cafè & Helados
+      </h1>
+    </header>
+
+    <main class="pt-24 pb-32 md:pt-12 md:max-w-7xl md:mx-auto">
+
+      <!-- Hero Section -->
+      <section class="px-6 mb-8 md:mb-12 text-center max-w-lg mx-auto md:max-w-2xl">
+        <span class="font-accent text-primary text-3xl md:text-4xl mb-2 block">Pedí tu deseo</span>
+        <h2 class="font-headline font-extrabold text-4xl md:text-6xl text-secondary mb-4 tracking-tight uppercase">
+          Chequeá nuestro menú</h2>
+        <p class="text-on-surface-variant font-medium opacity-80 md:text-lg">Todo hecho con amor en nuestra cocina,
+          usando solo los mejores ingredientes locales.</p>
+      </section>
+
+      <!-- Mobile Sticky Menu Categories Grid -->
+      <nav class="sticky top-[72px] z-40 bg-surface/95 backdrop-blur-sm px-4 py-4 shadow-sm">
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-2 max-w-lg md:max-w-4xl mx-auto">
+          <a class="flex items-center justify-center px-2 py-2.5 rounded-xl font-bold text-[11px] uppercase tracking-tighter text-center transition-colors bg-surface-container-high text-secondary"
+            href="#cafeteria">Cafetería</a>
+          <a class="flex items-center justify-center px-2 py-2.5 rounded-xl font-bold text-[11px] uppercase tracking-tighter text-center transition-colors bg-surface-container-high text-secondary"
+            href="#pasteleria">Pastelería</a>
+          <a class="flex items-center justify-center px-2 py-2.5 rounded-xl font-bold text-[11px] uppercase tracking-tighter text-center transition-colors bg-surface-container-high text-secondary"
+            href="#monoporciones">Monoporciones</a>
+          <a class="flex items-center justify-center px-2 py-2.5 rounded-xl font-bold text-[11px] uppercase tracking-tighter text-center transition-colors bg-surface-container-high text-secondary"
+            href="#salado">Salados</a>
+          <a class="flex items-center justify-center px-2 py-2.5 rounded-xl font-bold text-[11px] uppercase tracking-tighter text-center transition-colors bg-surface-container-high text-secondary"
+            href="#helados">Helados</a>
+          <a class="flex items-center justify-center px-2 py-2.5 rounded-xl font-bold text-[11px] uppercase tracking-tighter text-center transition-colors bg-surface-container-high text-secondary"
+            href="#promos">Promociones</a>
+        </div>
+      </nav>
+
+      <!-- Loyalty App Banner -->
+      <div class="px-4 mb-8 md:mb-12 flex justify-center">
+        <div
+          class="bg-[#88c9cd]/30 rounded-2xl md:rounded-full px-4 md:px-6 py-3 md:py-2.5 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-6 w-full max-w-md md:max-w-fit mx-auto shadow-sm border border-[#88c9cd]/20">
+          <div class="flex items-center gap-2">
+            <p
+              class="font-body text-[#3a2418] text-[10px] md:text-sm font-medium text-center md:text-left leading-tight">
+              <span class="text-[#3a2418] mr-1">★</span> ¿Sos cliente frecuente? Sumá puntos en cada visita
+            </p>
+          </div>
+          <a href="https://jade-travesseiro-873351.netlify.app/" target="_blank"
+            class="bg-[#3a2418] text-white px-4 py-2 md:px-3 md:py-1.5 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-wider whitespace-nowrap hover:opacity-90 transition-opacity">
+            DESCARGAR APP
+          </a>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div v-if="loading" class="px-4 space-y-12">
+        <div v-for="i in 3" :key="i" class="space-y-4">
+          <div class="skeleton h-8 w-48"></div>
+          <div class="space-y-3">
+            <div v-for="j in 4" :key="j" class="skeleton h-16 w-full rounded-xl"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content (shown when loaded) -->
+      <div v-else class="px-4 space-y-12 md:space-y-24">
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- CAFETERÍA Y BEBIDAS -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="scroll-mt-48 md:scroll-mt-24" id="cafeteria">
+          <div class="flex items-center gap-4 mb-6 md:mb-10">
+            <h2 class="font-headline text-2xl md:text-4xl font-extrabold uppercase text-on-surface tracking-tighter">
+              Cafetería & Bebidas</h2>
+            <div class="h-px flex-grow bg-on-surface/10"></div>
+          </div>
+
+          <!-- Skeleton si no hay productos -->
+          <div v-if="products.cafeteria.length === 0" class="space-y-3">
+            <div v-for="i in 4" :key="i" class="skeleton h-16 w-full rounded-xl"></div>
+          </div>
+
+          <div v-else class="space-y-3 md:space-y-0 desktop-grid">
+            <div v-for="product in products.cafeteria" :key="product.id"
+              class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
+              <!-- Foto desktop -->
+              <div
+                class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
+                <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover" :alt="product.nombre" />
+                <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
+              </div>
+              <div class="md:p-5 w-full flex flex-col justify-end">
+                <div class="flex justify-between items-center w-full">
+                  <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
+                  <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Complementos — siempre estáticos (son pocos y raramente cambian) -->
+          <div class="mt-6 md:mt-12 bg-secondary/5 p-5 md:p-8 rounded-2xl border border-secondary/10">
+            <h4
+              class="font-headline text-xs md:text-sm font-bold uppercase tracking-widest text-secondary mb-4 md:mb-6">
+              Complementos</h4>
+            <div class="space-y-3 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
+              <div v-for="comp in products.complementos" :key="comp.id"
+                class="flex justify-between items-center text-sm md:text-base">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-lg">water_drop</span>
+                  <span class="text-on-surface-variant font-medium">{{ comp.nombre }}</span>
+                </div>
+                <span class="font-bold text-primary">{{ comp.precio }}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- PASTELERÍA -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="scroll-mt-48 md:scroll-mt-24" id="pasteleria">
+          <div class="flex items-center gap-4 mb-6 md:mb-10">
+            <h2 class="font-headline text-2xl md:text-4xl font-extrabold uppercase text-on-surface tracking-tighter">
+              Pastelería</h2>
+            <div class="h-px flex-grow bg-on-surface/10"></div>
+          </div>
+          <div class="space-y-3 md:space-y-0 desktop-grid">
+            <div v-for="product in products.pasteleria" :key="product.id"
+              class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
+              <div
+                class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
+                <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover" :alt="product.nombre" />
+                <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
+              </div>
+              <div class="md:p-5 w-full flex flex-col justify-end">
+                <div class="flex justify-between items-center w-full">
+                  <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
+                  <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- MONOPORCIONES -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="scroll-mt-48 md:scroll-mt-24" id="monoporciones">
+          <div class="flex items-center gap-4 mb-6 md:mb-10">
+            <h2 class="font-headline text-2xl md:text-4xl font-extrabold uppercase text-on-surface tracking-tighter">
+              Monoporciones</h2>
+            <div class="h-px flex-grow bg-on-surface/10"></div>
+          </div>
+          <div class="space-y-3 md:space-y-0 desktop-grid">
+            <div v-for="product in products.monoporciones" :key="product.id"
+              class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
+              <div
+                class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
+                <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover" :alt="product.nombre" />
+                <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
+              </div>
+              <div class="md:p-5 w-full flex flex-col justify-end">
+                <div class="flex justify-between items-center w-full">
+                  <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
+                  <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- SALADOS -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="scroll-mt-48 md:scroll-mt-24" id="salado">
+          <div class="flex items-center gap-4 mb-6 md:mb-10">
+            <h2 class="font-headline text-2xl md:text-4xl font-extrabold uppercase text-on-surface tracking-tighter">
+              Salados</h2>
+            <div class="h-px flex-grow bg-on-surface/10"></div>
+          </div>
+          <div class="space-y-3 md:space-y-0 desktop-grid">
+
+            <!-- Productos normales (sin variantes) -->
+            <template v-for="product in products.salados" :key="product.id">
+
+              <!-- Producto con variantes (los 2 sándwiches) -->
+              <div v-if="product.isVariantProduct"
+                class="product-card rounded-xl p-4 flex flex-col gap-3 md:p-0 md:overflow-hidden">
+                <div
+                  class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
+                  <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover"
+                    :alt="product.nombre" />
+                  <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
+                </div>
+                <div class="md:p-5 w-full flex flex-col justify-end">
+                  <h4 class="text-xs md:text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-2">{{
+                    product.nombre }}</h4>
+                  <div class="flex justify-between text-sm md:text-base font-medium">
+                    <span>Jamón & Queso</span>
+                    <span class="text-primary font-bold">{{ product.priceCocido }}</span>
+                  </div>
+                  <div class="flex justify-between text-sm md:text-base font-medium">
+                    <span>Crudo & Queso</span>
+                    <span class="text-primary font-bold">{{ product.priceCrudo }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Producto normal -->
+              <div v-else
+                class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
+                <div
+                  class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
+                  <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover"
+                    :alt="product.nombre" />
+                  <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
+                </div>
+                <div class="md:p-5 w-full flex flex-col justify-end">
+                  <div class="flex justify-between items-center w-full">
+                    <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
+                    <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
+                  </div>
+                </div>
+              </div>
+
+            </template>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- HELADOS ARTESANALES -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="scroll-mt-48 md:scroll-mt-24" id="helados">
+          <div class="flex items-center gap-4 mb-6 md:mb-10">
+            <h2 class="font-headline text-2xl md:text-4xl font-extrabold uppercase text-on-surface tracking-tighter">
+              Helados Artesanales</h2>
+            <div class="h-px flex-grow bg-on-surface/10"></div>
+          </div>
+          <div class="product-card rounded-3xl overflow-hidden mb-6 md:mb-12">
+            <img alt="Helados Artesanales" class="w-full h-48 md:h-96 object-cover"
+              src="img/gelatohome.jfif" />
+            <div class="p-6 md:p-12">
+              <h3 class="font-headline text-sm md:text-lg font-bold text-primary uppercase tracking-widest mb-6">
+                Nuestros Sabores</h3>
+
+              <!-- Sabores dinámicos desde Firebase -->
+              <div
+                class="flex flex-wrap gap-2 md:grid md:grid-cols-4 md:gap-2 text-[10px] md:text-xs font-bold text-on-surface-variant mb-6 md:mb-10 uppercase tracking-wider">
+                <div v-for="flavor in iceCreamFlavors" :key="flavor.id"
+                  class="flavor-grid-item md:bg-[#efeae6] md:border md:border-[#d9d0c8] rounded md:rounded-none px-2 py-1.5 md:p-0 bg-surface">
+                  <span class="flavor-text uppercase">{{ flavor.name }}</span>
+                </div>
+              </div>
+
+              <!-- Presentaciones dinámicas desde Firebase -->
+              <div
+                class="border-t border-on-surface/5 pt-6 md:pt-10 md:grid md:grid-cols-2 md:gap-x-16 space-y-4 md:space-y-2">
+                <div v-for="pres in iceCreamPresentations" :key="pres.id"
+                  class="flex justify-between items-center text-sm md:text-lg">
+                  <span class="text-on-surface-variant font-medium">{{ pres.name }}</span>
+                  <span class="font-bold text-primary">{{ pres.price }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- PROMOCIONES -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="scroll-mt-48 md:scroll-mt-24" id="promos">
+          <div class="flex items-center gap-4 mb-6 md:mb-10">
+            <h2 class="font-headline text-2xl md:text-4xl font-extrabold uppercase text-on-surface tracking-tighter">
+              Promociones</h2>
+            <div class="h-px flex-grow bg-on-surface/10"></div>
+          </div>
+          <div class="space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-6">
+            <div v-for="promo in products.promociones" :key="promo.id"
+              class="product-card rounded-2xl p-5 md:p-8 border-2 border-primary-container/30">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-bold text-on-surface leading-tight md:text-xl">{{ promo.nombre }}</h3>
+                <span class="font-bold text-primary text-lg md:text-2xl">{{ promo.precio }}</span>
+              </div>
+              <p v-if="promo.description" class="text-xs md:text-sm text-on-surface-variant">{{ promo.description }}</p>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- fin v-else -->
+
+      <!-- Footer Area -->
+      <section class="mt-20 mb-10 text-center space-y-6 px-4 md:mt-32">
+        <button
+          onclick="if(navigator.share){navigator.share({title:'Menú QUATTRO\'S',url:window.location.href})}else{navigator.clipboard.writeText(window.location.href);alert('¡Link copiado!')}"
+          class="w-full md:max-w-md mx-auto flex items-center justify-center gap-3 py-4 rounded-full border-2 border-primary text-primary font-bold active:bg-primary active:text-white transition-all hover:bg-primary hover:text-white">
+          <span class="material-symbols-outlined">share</span>
+          Compartir Menú
+        </button>
+        <p class="text-xs md:text-sm text-on-surface-variant opacity-60 px-8">
+          Padre Dutto y 12 de Octubre, Mar del Plata.<br />
+          <span class="horarios-text">Lun–Vie 08:30–19:00 · Sáb 09:30–13:00 · Dom cerrado</span>
+        </p>
+      </section>
+
+    </main>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fef8f4]/90 backdrop-blur-xl flex justify-around items-center px-8 py-3 pb-safe z-50 rounded-t-3xl border-t border-[#795746]/10 shadow-[0_-4px_20px_rgba(121,87,70,0.05)]">
+        <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="index.html">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[11px] font-medium uppercase mt-1">Inicio</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-[#22686c] bg-[#88c9cd]/20 rounded-xl px-4 py-1" href="menu.html">
+            <span class="material-symbols-outlined">restaurant_menu</span>
+            <span class="text-[11px] font-medium uppercase mt-1">Menú</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="historia.html">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span class="text-[11px] font-medium uppercase mt-1">Historia</span>
+        </a>
+    </nav>
+
+    <!-- FAB: WhatsApp -->
+    <a class="fixed bottom-24 right-4 md:bottom-12 md:right-12 z-50 bg-[#3a2418] text-[#efeae6] flex items-center gap-2 px-5 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all"
+      href="https://wa.me/5492235424533">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+      <span class="font-bold text-sm">WhatsApp Pedidos</span>
+    </a>
+
+  </div><!-- fin #app -->
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SCRIPTS -->
+  <!-- ══════════════════════════════════════════ -->
+  <script type="importmap">
+{
+  "imports": {
+    "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+  }
+}
+</script>
+
+  <script type="module">
+    import { createApp, ref, onMounted } from 'vue';
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+    // ── Configuración Firebase ──────────────────────
+    const firebaseConfig = {
+      apiKey: "AIzaSyDE59usI9a18ktu3nxk2_Y331r4if8w1-k",
+      authDomain: "quattros-app.firebaseapp.com",
+      projectId: "quattros-app",
+      storageBucket: "quattros-app.firebasestorage.app",
+      messagingSenderId: "322688025414",
+      appId: "1:322688025414:web:799957599830ae4df7db47",
+      measurementId: "G-ZY3HHD3507"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // ── Vue App ─────────────────────────────────────
+    createApp({
+      setup() {
+        const loading = ref(true);
+
+        // Estructura de productos por categoría
+        const products = ref({
+          cafeteria: [],
+          complementos: [],
+          pasteleria: [],
+          monoporciones: [],
+          salados: [],
+          promociones: []
+        });
+
+        const iceCreamFlavors = ref([]);
+        const iceCreamPresentations = ref([]);
+
+        // ── Orden oficial por categoría ─────────────
+        const ORDEN = {
+          cafeteria: [
+            'Espresso', 'Americano', 'Cortado', 'Lágrima', 'Té', 'Café con leche',
+            'Capuccino', 'Submarino', 'Chocolatada', 'Affogato', 'Milkshake',
+            'Café frappé', 'Licuado de banana', 'Exprimido de naranja',
+            'Gaseosa Coca-Cola', 'Agua saborizada Aquarius', 'Agua mineral'
+          ],
+          complementos: [
+            'Leche de almendras', 'Extra Crema', 'Vaso de leche'
+          ],
+          pasteleria: [
+            'Medialuna', 'Alfajor', 'Cookies', 'Porción de budín', 'Cocada'
+          ],
+          monoporciones: [
+            'Brownie', 'Brownie + Bocha de helado', 'Pastafrola',
+            'Crumble de manzana', 'Tarta de coco'
+          ],
+          salados: [
+            'Medialuna', '1/2 Tostado de miga', 'Tostado de miga',
+            'Scon de queso', 'Porción de tostadas',
+            'Sándwich de scon', 'Sándwich de focaccia'
+          ],
+          promociones: [
+            'Promo 1', 'Promo 2', 'Promo 3', 'Promo 4', 'Promo 5', 'Promo 6', 'Promo 7'
+          ]
+        };
+
+        // Función que ordena un array de productos según ORDEN
+        const sortProducts = (arr, cat) => {
+          const order = ORDEN[cat] || [];
+          return [...arr].sort((a, b) => {
+            const ia = order.findIndex(n => a.nombre.toLowerCase().includes(n.toLowerCase()));
+            const ib = order.findIndex(n => b.nombre.toLowerCase().includes(n.toLowerCase()));
+            const posA = ia === -1 ? 9999 : ia;
+            const posB = ib === -1 ? 9999 : ib;
+            return posA - posB;
+          });
+        };
+
+        onMounted(async () => {
+          try {
+            // ── 1. Productos generales ──────────────
+            const productosSnap = await getDocs(collection(db, "productos"));
+            productosSnap.forEach((doc) => {
+              const data = doc.data();
+              const cat = data.categoria;
+
+              // ← AGGIUNTA: ignora documenti senza nombre o precio
+              if (!data.nombre || !data.precio) return;
+
+              if (products.value[cat]) {
+                products.value[cat].push({
+                  id: doc.id,
+                  nombre: data.nombre,
+                  precio: data.precio,
+                  foto: data.foto || null,
+                  description: data.description || '',
+                  isVariantProduct: data.isVariantProduct || false,
+                  priceCrudo: data.priceCrudo || '',
+                  priceCocido: data.priceCocido || ''
+                });
+              }
+            });
+
+            // Ordenamos cada categoría
+            Object.keys(products.value).forEach(cat => {
+              products.value[cat] = sortProducts(products.value[cat], cat);
+            });
+
+            // ── 2. Sabores de helado ────────────────
+            const saboresSnap = await getDocs(collection(db, "sabores"));
+            saboresSnap.forEach((doc) => {
+              const data = doc.data();
+              iceCreamFlavors.value.push({
+                id: doc.id,
+                name: data.name || data.nombre || "Sabor"
+              });
+            });
+            iceCreamFlavors.value.sort((a, b) => a.name.localeCompare(b.name));
+
+            // ── 3. Presentaciones de helado ─────────
+            const presSnap = await getDocs(collection(db, "configuracion_helados"));
+            presSnap.forEach((doc) => {
+              const data = doc.data();
+              iceCreamPresentations.value.push({
+                id: doc.id,
+                name: data.name || data.nombre || "Presentación",
+                price: data.price || data.precio || "",
+                orden: data.orden || 0
+              });
+            });
+            iceCreamPresentations.value.sort((a, b) => a.orden - b.orden);
+
+          } catch (error) {
+            console.error("Error al cargar el menú desde Firebase:", error);
+          } finally {
+            loading.value = false;
+          }
+        });
+
+        return {
+          loading,
+          products,
+          iceCreamFlavors,
+          iceCreamPresentations
+        };
+      }
+    }).mount('#app');
+
+    // — Scroll activo en nav —
+    setTimeout(() => {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('nav.sticky a');
+
+      window.addEventListener('scroll', () => {
+        let current = "";
+        sections.forEach(section => {
+          if (pageYOffset >= section.offsetTop - 200) current = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active-category');
+          if (link.getAttribute('href').slice(1) === current) link.classList.add('active-category');
+        });
+      });
+    }, 2000); 0
+  </script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDE59usI9a18ktu3nxk2_Y331r4if8w1-k",
+      authDomain: "quattros-app.firebaseapp.com",
+      projectId: "quattros-app",
+      storageBucket: "quattros-app.firebasestorage.app",
+      messagingSenderId: "322688025414",
+      appId: "1:322688025414:web:799957599830ae4df7db47"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function cargarConfig() {
+      const snap = await getDoc(doc(db, "configuracion_web", "principal"));
+      if (snap.exists()) {
+        const data = snap.data();
+        if (data.horarios) {
+          document.querySelectorAll('.horarios-text').forEach(el => el.textContent = data.horarios);
+        }
+      }
+    }
+
+    cargarConfig();
+  </script>
+
+  <script>
+    let clickCount = 0;
+    let clickTimer = null;
+    document.getElementById('logo').addEventListener('click', () => {
+      clickCount++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(() => { clickCount = 0; }, 800);
+      if (clickCount >= 3) {
+        clickCount = 0;
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+
+</body>
+
+</html>

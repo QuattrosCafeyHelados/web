@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>QUATTRO'S — Nuestra Historia</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&amp;family=Jost:wght@400;500;700&amp;family=Pinyon+Script&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface": "#1d1b19",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#5b4133",
+            "secondary-fixed": "#ffdbcc",
+            "tertiary": "#75584a",
+            "surface-container-low": "#f8f3ef",
+            "surface-bright": "#fef8f4",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#ffd0bb",
+            "error": "#ba1a1a",
+            "surface": "#fef8f4",
+            "on-secondary-fixed-variant": "#5f3f30",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#7a5747",
+            "inverse-primary": "#90d2d6",
+            "outline": "#6f7979",
+            "inverse-on-surface": "#f5f0ec",
+            "on-background": "#1d1b19",
+            "on-secondary-fixed": "#2d1509",
+            "on-primary-fixed-variant": "#004f53",
+            "secondary-fixed-dim": "#eabda9",
+            "on-error": "#ffffff",
+            "surface-variant": "#e6e2de",
+            "secondary": "#795746",
+            "surface-container-highest": "#e6e2de",
+            "primary": "#22686c",
+            "tertiary-fixed-dim": "#e4bfad",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#ffdbca",
+            "primary-fixed": "#aceef2",
+            "outline-variant": "#bfc8c9",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#ece7e3",
+            "surface-container": "#f2ede9",
+            "surface-dim": "#ded9d5",
+            "primary-container": "#88c9cd",
+            "on-surface-variant": "#3f4849",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#624739",
+            "on-tertiary-fixed": "#2a170c",
+            "on-primary-fixed": "#002021",
+            "on-primary-container": "#03565a",
+            "tertiary-container": "#dbb7a5",
+            "background": "#fef8f4",
+            "surface-tint": "#22686c",
+            "primary-fixed-dim": "#90d2d6",
+            "inverse-surface": "#32302e"
+          },
+          fontFamily: {
+            "headline": ["Epilogue"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"],
+            "pinyon": ["Pinyon Script"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 15;
+    }
+
+    .glass-effect {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- TopAppBar Desktop -->
+  <header class="hidden md:block fixed top-0 w-full z-50 bg-[#fef8f4]/80 backdrop-blur-md border-b border-secondary/5">
+    <div class="max-w-[1280px] mx-auto flex justify-between items-center px-6 lg:px-12 py-4 w-full">
+      <h1 id="logo"
+        class="font-headline font-bold text-[#3a2418] text-xl lg:text-2xl tracking-tighter uppercase cursor-pointer select-none">
+        QUATTRO'S Cafè & Helados</h1>
+      <nav class="hidden lg:flex items-center gap-10">
+        <a class="font-headline font-bold text-secondary text-sm uppercase tracking-widest hover:text-primary transition-colors"
+          href="index.html">Inicio</a>
+        <a class="font-headline font-bold text-secondary text-sm uppercase tracking-widest hover:text-primary transition-colors"
+          href="menu.html">Menú</a>
+        <a class="font-headline font-bold text-secondary text-sm uppercase tracking-widest hover:text-primary transition-colors"
+          href="historia.html">Nuestra Historia</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- TopAppBar Mobile -->
+  <header
+    class="md:hidden fixed top-0 w-full z-50 bg-[#fef8f4]/80 backdrop-blur-md border-b border-secondary/5 flex justify-center items-center px-6 py-4">
+    <h1 id="logo"
+      class="font-headline font-bold text-[#3a2418] text-xl tracking-tighter uppercase cursor-pointer select-none">
+      QUATTRO'S Cafè & Helados</h1>
+  </header>
+
+  <main class="pt-20 pb-24 overflow-x-hidden">
+
+    <!-- Hero Header -->
+    <header class="relative px-6 py-6 flex flex-col items-center text-center w-full">
+      <div class="mb-1">
+        <span class="font-pinyon text-4xl md:text-5xl text-primary block">Nuestra historia</span>
+      </div>
+      <h1 class="font-headline font-bold text-4xl md:text-6xl tracking-tight text-secondary leading-none">QUIÉNES SOMOS
+      </h1>
+      <div class="w-16 h-1 mt-4 bg-primary-container rounded-full"></div>
+    </header>
+
+    <!-- Section 1: Foodtruck -->
+    <section class="mt-4 px-6 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+        <div class="w-full lg:w-1/2 relative">
+          <div class="absolute -top-4 -left-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl"></div>
+          <div
+            class="rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+            <img alt="Foodtruck Violeta" class="w-full h-[350px] object-cover"
+              src="img/foodtruck.png" />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-surface-container-lowest p-4 rounded-xl shadow-xl max-w-[160px]">
+            <p class="font-headline font-bold text-primary text-xl">2022</p>
+            <p class="font-label text-[10px] uppercase tracking-widest text-secondary mt-1">El Comienzo</p>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 space-y-4">
+          <h2 class="font-headline font-bold text-xl md:text-2xl text-secondary leading-tight uppercase">DESDE UN
+            FOODTRUCK EN 2022</h2>
+          <p
+            class="text-on-surface-variant leading-relaxed text-lg italic font-pinyon text-xl text-primary-container opacity-80">
+            "Un sueño sobre ruedas"</p>
+          <p class="text-on-surface-variant leading-relaxed text-sm">
+            Todo comenzó con una pasión compartida por los sabores auténticos y la calidez de un buen café. En 2022,
+            salimos a las calles con nuestro icónico foodtruck violeta, llevando helados artesanales y café de
+            especialidad a cada rincón de la ciudad.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed text-sm">
+            Lo que empezó como un proyecto nómade pronto se convirtió en un punto de encuentro para amigos y familias
+            que buscaban ese "deseo" especial en cada bocado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider Tonal Shift -->
+    <div class="h-12 bg-gradient-to-b from-surface to-surface-container-low my-8"></div>
+
+    <!-- Section 2: Mar del Plata -->
+    <section class="bg-surface-container-low py-10 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
+        <div class="w-full lg:w-1/2 space-y-4">
+          <h2 class="font-headline font-bold text-xl md:text-2xl text-secondary leading-tight uppercase">INAUGURACIÓN EN
+            MAR DEL PLATA — 2024</h2>
+          <p class="font-pinyon text-xl text-primary-container">El hogar de Quattro's</p>
+          <p class="text-on-surface-variant leading-relaxed text-sm">
+            Dos años después, el sueño creció y encontró su lugar frente al mar. En 2024 abrimos las puertas de
+            nuestro primer local en Mar del Plata, diseñado para ser un refugio de calma y dulzura.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed text-sm">
+            Nuestra arquitectura combina la elegancia de la pátisserie europea con el espíritu vibrante de nuestra
+            costa. Un espacio donde cada detalle, desde la textura de nuestras cremas hasta la madera de nuestras
+            mesas, cuenta nuestra historia.
+          </p>
+          <div class="pt-2">
+            <button
+              class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-primary-container transition-colors shadow-lg shadow-primary/20">
+              Visitá nuestro local
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 relative">
+          <div
+            class="rounded-2xl overflow-hidden shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500 border-8 border-surface-container-lowest">
+            <img alt="Interior Cálido" class="w-full h-[350px] object-cover"
+              src="img/nuevo.jfif" />
+          </div>
+          <div class="absolute -top-6 -right-4 hidden md:block">
+            <div
+              class="bg-secondary text-on-primary w-20 h-20 rounded-full flex flex-col items-center justify-center text-center p-2 transform rotate-12">
+              <span class="material-symbols-outlined text-2xl" data-icon="star">star</span>
+              <span class="text-[8px] font-bold uppercase">Hecho con amor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Quote Section -->
+    <section class="py-12 px-6 text-center max-w-3xl mx-auto">
+      <span class="material-symbols-outlined text-4xl text-primary-container"
+        data-icon="format_quote">format_quote</span>
+      <p class="font-pinyon text-3xl md:text-4xl text-secondary leading-tight mt-2">
+        "No solo servimos helados y café, creamos momentos que se quedan guardados como el mejor de los recuerdos."
+      </p>
+      <p class="font-headline font-bold text-primary tracking-widest mt-6 uppercase">Pedí tu deseo.</p>
+    </section>
+
+    <!-- Footer Area -->
+    <section class="mt-20 mb-32 text-center space-y-6 px-4 md:mt-32">
+      <p class="text-xs md:text-sm text-on-surface-variant opacity-60 px-8">
+        Padre Dutto y 12 de Octubre, Mar del Plata.<br />
+        <span class="horarios-text">Lun–Vie 08:30–19:00 · Sáb 09:30–13:00 · Dom cerrado</span>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- BottomNavBar (Mobile Only) -->
+  <nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fef8f4]/90 backdrop-blur-xl flex justify-around items-center px-8 py-3 pb-safe z-50 rounded-t-3xl border-t border-[#795746]/10 shadow-[0_-4px_20px_rgba(121,87,70,0.05)]">
+      <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="index.html">
+          <span class="material-symbols-outlined">home</span>
+          <span class="text-[11px] font-medium uppercase mt-1">Inicio</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-[#795746] px-4 py-1" href="menu.html">
+          <span class="material-symbols-outlined">restaurant_menu</span>
+          <span class="text-[11px] font-medium uppercase mt-1">Menú</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-[#22686c] bg-[#88c9cd]/20 rounded-xl px-4 py-1" href="historia.html">
+          <span class="material-symbols-outlined">menu_book</span>
+          <span class="text-[11px] font-medium uppercase mt-1">Historia</span>
+      </a>
+  </nav>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDE59usI9a18ktu3nxk2_Y331r4if8w1-k",
+      authDomain: "quattros-app.firebaseapp.com",
+      projectId: "quattros-app",
+      storageBucket: "quattros-app.firebasestorage.app",
+      messagingSenderId: "322688025414",
+      appId: "1:322688025414:web:799957599830ae4df7db47"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function cargarConfig() {
+      const snap = await getDoc(doc(db, "configuracion_web", "principal"));
+      if (snap.exists()) {
+        const data = snap.data();
+        if (data.horarios) {
+          document.querySelectorAll('.horarios-text').forEach(el => el.textContent = data.horarios);
+        }
+      }
+    }
+
+    cargarConfig();
+  </script>
+  <script>
+    let clickCount = 0;
+    let clickTimer = null;
+    document.getElementById('logo').addEventListener('click', () => {
+      clickCount++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(() => { clickCount = 0; }, 800);
+      if (clickCount >= 3) {
+        clickCount = 0;
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+
+</body>
+
+</html>

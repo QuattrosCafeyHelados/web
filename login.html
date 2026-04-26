@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>QUATTRO'S - Acceso Administrativo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Pinyon+Script&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#22686c",
+                        "aquamarine": "#88c9cd",
+                        "crema": "#efeae6",
+                        "cafe": "#5c3d2e",
+                        "secondary": "#795746",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1d1b19"
+                    },
+                    fontFamily: {
+                        "headline": ["Epilogue", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "script": ["Pinyon Script", "cursive"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .reglo-caps {
+            font-family: 'Epilogue', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Hide scrollbar */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Dot filling animation */
+        .pin-dot.filled {
+            background-color: #5c3d2e;
+            border-color: #5c3d2e;
+        }
+
+        /* Shake animation for error */
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
+        }
+
+        .shake {
+            animation: shake 0.4s ease-in-out;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-aquamarine min-h-screen h-screen flex items-center justify-center p-6 font-body text-on-surface overflow-hidden">
+    <!-- Main Card Container -->
+    <main
+        class="w-full max-w-[420px] lg:max-w-[480px] bg-crema rounded-[2.5rem] p-10 md:p-14 lg:p-20 shadow-2xl shadow-black/10 flex flex-col items-center relative overflow-hidden"
+        id="login-card">
+        <!-- Branding Section -->
+        <div class="text-center mb-14 lg:mb-16 w-full">
+            <h1 class="reglo-caps text-4xl md:text-5xl lg:text-6xl text-primary leading-none">QUATTRO'S</h1>
+            <div class="relative h-10 lg:h-12 flex justify-center">
+                <p class="font-script text-3xl md:text-4xl lg:text-5xl text-secondary absolute top-0">Cafè &amp; Helados
+                </p>
+            </div>
+            <h2 class="text-[9px] lg:text-[10px] tracking-[0.25em] font-bold text-cafe/60 uppercase mt-6 lg:mt-8">ACCESO
+                EXCLUSIVO PARA ADMINISTRADORES</h2>
+        </div>
+        <!-- PIN Input Logic Container -->
+        <div class="w-full flex flex-col items-center gap-12 lg:gap-14">
+            <!-- Hidden input to trigger keyboard -->
+            <input autocomplete="one-time-code" autofocus="" class="absolute opacity-0 -z-10 pointer-events-none"
+                id="pin-input" inputmode="numeric" maxlength="6" pattern="\d*" type="number" />
+            <!-- PIN Display Section -->
+            <div class="flex flex-col items-center gap-6">
+                <div class="flex gap-4 lg:gap-6 justify-center" id="dots-container">
+                    <div
+                        class="pin-dot w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 rounded-full border-2 border-cafe/30 transition-all duration-200">
+                    </div>
+                    <div
+                        class="pin-dot w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 rounded-full border-2 border-cafe/30 transition-all duration-200">
+                    </div>
+                    <div
+                        class="pin-dot w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 rounded-full border-2 border-cafe/30 transition-all duration-200">
+                    </div>
+                    <div
+                        class="pin-dot w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 rounded-full border-2 border-cafe/30 transition-all duration-200">
+                    </div>
+                    <div
+                        class="pin-dot w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 rounded-full border-2 border-cafe/30 transition-all duration-200">
+                    </div>
+                    <div
+                        class="pin-dot w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 rounded-full border-2 border-cafe/30 transition-all duration-200">
+                    </div>
+                </div>
+                <p class="text-[10px] lg:text-[11px] font-semibold text-cafe/40 uppercase tracking-[0.2em] h-4 transition-all duration-300"
+                    id="status-text">Ingresá tu código</p>
+            </div>
+            <!-- Action Button -->
+            <button
+                class="w-full lg:w-4/5 py-5 lg:py-6 bg-cafe text-white font-bold tracking-widest text-xs lg:text-sm rounded-2xl transition-all uppercase flex items-center justify-center gap-2 opacity-20 cursor-not-allowed"
+                disabled="" id="submit-btn">
+                Ingresar
+                <span class="material-symbols-outlined text-sm lg:text-base">arrow_forward</span>
+            </button>
+        </div>
+        <!-- Error Message (Absolute positioning for less layout shift) -->
+        <p class="absolute bottom-6 lg:bottom-10 text-[11px] font-bold text-error uppercase tracking-widest opacity-0 transition-opacity duration-300"
+            id="error-msg">PIN incorrecto</p>
+        <!-- Lockout Overlay (Hidden) -->
+        <div class="hidden absolute inset-0 bg-crema/95 backdrop-blur-sm z-50 flex flex-col items-center justify-center p-10 text-center"
+            id="lockout-overlay">
+            <span class="material-symbols-outlined text-5xl lg:text-6xl text-cafe mb-6">lock</span>
+            <h3 class="reglo-caps text-xl lg:text-2xl text-primary mb-2">Acceso bloqueado</h3>
+            <p class="text-xs lg:text-sm text-cafe/60 leading-relaxed mb-8">Demasiados intentos fallidos. Reintentá en:
+            </p>
+            <div class="flex flex-col items-center">
+                <span class="text-5xl lg:text-6xl font-bold text-cafe tabular-nums tracking-tighter"
+                    id="countdown">60</span>
+                <span class="text-[9px] lg:text-[10px] uppercase tracking-widest text-cafe/40 mt-2">Segundos</span>
+            </div>
+        </div>
+    </main>
+    <script>
+        const pinInput = document.getElementById('pin-input');
+        const dots = document.querySelectorAll('.pin-dot');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusText = document.getElementById('status-text');
+        const errorMsg = document.getElementById('error-msg');
+        const loginCard = document.getElementById('login-card');
+        const lockoutOverlay = document.getElementById('lockout-overlay');
+        const countdownEl = document.getElementById('countdown');
+
+        let attempts = 0;
+        const MAX_ATTEMPTS = 3;
+        // PIN cifrato con SHA-256 (non reversibile)
+        const CORRECT_PIN_HASH = "021d29a770625f4f553eb2d84542239abd15aae1e0a3aa82a9a12a0c5a5ee34c";
+
+        async function hashPin(pin) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(pin);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        // Auto focus on load and when clicking anywhere on card
+        window.addEventListener('load', () => pinInput.focus());
+        document.addEventListener('click', () => pinInput.focus());
+
+        pinInput.addEventListener('input', (e) => {
+            let val = e.target.value;
+            if (val.length > 6) {
+                val = val.slice(0, 6);
+                pinInput.value = val;
+            }
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index < val.length) {
+                    dot.classList.add('filled');
+                } else {
+                    dot.classList.remove('filled');
+                }
+            });
+
+            // Toggle button
+            if (val.length === 6) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-20', 'cursor-not-allowed');
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-20', 'cursor-not-allowed');
+                errorMsg.classList.add('opacity-0');
+            }
+        });
+
+        submitBtn.addEventListener('click', async () => {
+            const pin = pinInput.value;
+            const pinHash = await hashPin(pin);
+            if (pinHash === CORRECT_PIN_HASH) {
+                statusText.innerText = "ACCEDIENDO...";
+                statusText.classList.add('text-primary');
+                submitBtn.innerHTML = 'Verificando...';
+                setTimeout(() => { window.location.href = 'admin.html'; }, 800);
+            } else {
+                handleError();
+            }
+        });
+
+        function handleError() {
+            attempts++;
+            pinInput.value = '';
+            dots.forEach(dot => dot.classList.remove('filled'));
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-20', 'cursor-not-allowed');
+
+            loginCard.classList.add('shake');
+            errorMsg.classList.remove('opacity-0');
+
+            setTimeout(() => {
+                loginCard.classList.remove('shake');
+            }, 400);
+
+            if (attempts >= MAX_ATTEMPTS) {
+                startLockout();
+            }
+        }
+
+        function startLockout() {
+            lockoutOverlay.classList.remove('hidden');
+            let timeLeft = 60;
+            const timer = setInterval(() => {
+                timeLeft--;
+                countdownEl.innerText = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    lockoutOverlay.classList.add('hidden');
+                    attempts = 0;
+                    pinInput.focus();
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
