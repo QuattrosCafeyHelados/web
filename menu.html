@@ -96,30 +96,7 @@
       }
 
       .desktop-product-card {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        overflow: hidden;
-        border-radius: 1rem;
-        display: flex;
-      }
-
-      .desktop-product-image {
-        display: block !important;
-        width: 100%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        background-color: #f3f4f6;
-      }
-
-      .desktop-product-content {
-        padding: 1.25rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        flex-grow: 1;
-        min-height: 100px;
+        padding: 1rem 1.25rem;
       }
 
       .desktop-helados-grid {
@@ -268,14 +245,8 @@
 
           <div v-else class="space-y-3 md:space-y-0 desktop-grid">
             <div v-for="product in products.cafeteria" :key="product.id"
-              class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
-              <!-- Foto desktop -->
-              <div
-                class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
-                <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover" :alt="product.nombre" />
-                <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
-              </div>
-              <div class="md:p-5 w-full flex flex-col justify-end">
+              class="product-card rounded-xl p-4 flex justify-between items-center">
+              <div class="w-full flex flex-col justify-end">
                 <div class="flex justify-between items-center w-full">
                   <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
                   <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
@@ -313,13 +284,8 @@
           </div>
           <div class="space-y-3 md:space-y-0 desktop-grid">
             <div v-for="product in products.pasteleria" :key="product.id"
-              class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
-              <div
-                class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
-                <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover" :alt="product.nombre" />
-                <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
-              </div>
-              <div class="md:p-5 w-full flex flex-col justify-end">
+              class="product-card rounded-xl p-4 flex justify-between items-center">
+              <div class="w-full flex flex-col justify-end">
                 <div class="flex justify-between items-center w-full">
                   <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
                   <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
@@ -340,13 +306,8 @@
           </div>
           <div class="space-y-3 md:space-y-0 desktop-grid">
             <div v-for="product in products.monoporciones" :key="product.id"
-              class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
-              <div
-                class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
-                <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover" :alt="product.nombre" />
-                <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
-              </div>
-              <div class="md:p-5 w-full flex flex-col justify-end">
+              class="product-card rounded-xl p-4 flex justify-between items-center">
+              <div class="w-full flex flex-col justify-end">
                 <div class="flex justify-between items-center w-full">
                   <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
                   <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
@@ -368,18 +329,11 @@
           <div class="space-y-3 md:space-y-0 desktop-grid">
 
             <!-- Productos normales (sin variantes) -->
-            <template v-for="product in products.salados" :key="product.id">
+            <template v-for="product in products.salados.filter(p => !p.isVariantProduct)" :key="product.id">
 
               <!-- Producto con variantes (los 2 sándwiches) -->
-              <div v-if="product.isVariantProduct"
-                class="product-card rounded-xl p-4 flex flex-col gap-3 md:p-0 md:overflow-hidden">
-                <div
-                  class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
-                  <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover"
-                    :alt="product.nombre" />
-                  <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
-                </div>
-                <div class="md:p-5 w-full flex flex-col justify-end">
+              <div v-if="product.isVariantProduct" class="product-card rounded-xl p-4 flex flex-col gap-3">
+                <div class="w-full flex flex-col justify-end">
                   <h4 class="text-xs md:text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-2">{{
                     product.nombre }}</h4>
                   <div class="flex justify-between text-sm md:text-base font-medium">
@@ -394,15 +348,8 @@
               </div>
 
               <!-- Producto normal -->
-              <div v-else
-                class="product-card rounded-xl p-4 flex justify-between items-center md:flex-col md:items-start md:p-0 md:overflow-hidden">
-                <div
-                  class="hidden md:flex w-full aspect-square items-center justify-center bg-gray-100 text-gray-400 overflow-hidden">
-                  <img v-if="product.foto" :src="product.foto" class="w-full h-full object-cover"
-                    :alt="product.nombre" />
-                  <span v-else class="material-symbols-outlined text-4xl">photo_camera</span>
-                </div>
-                <div class="md:p-5 w-full flex flex-col justify-end">
+              <div v-else class="product-card rounded-xl p-4 flex justify-between items-center">
+                <div class="w-full flex flex-col justify-end">
                   <div class="flex justify-between items-center w-full">
                     <span class="font-bold text-on-surface md:text-lg">{{ product.nombre }}</span>
                     <span class="font-bold text-primary md:text-xl">{{ product.precio }}</span>
@@ -510,7 +457,7 @@
 
     <!-- FAB: WhatsApp -->
     <a class="fixed bottom-24 right-4 md:bottom-12 md:right-12 z-50 bg-[#3a2418] text-[#efeae6] flex items-center gap-2 px-5 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all"
-      href="https://wa.me/5492235264041">
+      href="https://wa.me/5402236706630">
       <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
       <span class="font-bold text-sm">WhatsApp Pedidos</span>
     </a>
@@ -624,14 +571,15 @@
                   description: data.description || '',
                   isVariantProduct: data.isVariantProduct || false,
                   priceCrudo: data.priceCrudo || '',
-                  priceCocido: data.priceCocido || ''
+                  priceCocido: data.priceCocido || '',
+                  orden: data.orden ?? 9999
                 });
               }
             });
 
-            // Ordenamos cada categoría
+            // Ordenamos cada categoría según el número "orden" que se gestiona desde el panel admin
             Object.keys(products.value).forEach(cat => {
-              products.value[cat] = sortProducts(products.value[cat], cat);
+              products.value[cat] = [...products.value[cat]].sort((a, b) => (a.orden ?? 9999) - (b.orden ?? 9999));
             });
 
             // ── 2. Sabores de helado ────────────────
